@@ -3,7 +3,7 @@
 import requests
 
 def deploy_render_api(): #params when integrating as a whole: repo name, api key
-    API_KEY = 'rnd_8xSMgp0rGoZ9Ic1YT4XZDq4BQNAq'
+    API_KEY = 'rnd_MYk2kvYV3c5cX4Sl7v6AlodCF2y0'
     headers = {'Authorization': f'Bearer {API_KEY}'}
 
     url='https://api.render.com/v1/owners'
