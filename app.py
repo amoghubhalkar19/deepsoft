@@ -1,7 +1,6 @@
 import utils
 import streamlit as st
 import streamlit.components.v1 as comps
-import time
 
 def main():
     st.title('Website Builder')
