@@ -1,281 +1,281 @@
 <!DOCTYPE html>
-        <html lang="en">
-          <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Grocery Delivery Service</title>
-            <style>
-              * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-              }
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>WatchCo - Modern Timepieces</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
 
-              body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-              }
+                 body {
+                     font-family: 'Montserrat', sans-serif;
+                     line-height: 1.6;
+                 }
 
-              /* Header */
-              header {
-                background-color: #333;
-                color: #fff;
-                padding: 20px;
-              }
+                 a {
+                     text-decoration: none;
+                     color: #333;
+                 }
 
-              header nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              }
+                 ul {
+                     list-style: none;
+                 }
 
-              header nav a {
-                color: #fff;
-                text-decoration: none;
-                padding: 10px;
-              }
+                 .container {
+                     max-width: 1100px;
+                     margin: auto;
+                     padding: 20px;
+                 }
 
-              header nav a:hover {
-                background-color: #555;
-              }
+                 header {
+                     background-color: #f1c40f;
+                     padding: 20px;
+                 }
 
-              /* Hero */
-              .hero {
-                height: 100vh;
-                background-image: url("https://source.unsplash.com/random/food,grocery");
-                background-size: cover;
-                background-position: center;
-              }
+                 nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
 
-              .hero h1 {
-                color: #fff;
-                text-align: center;
-                font-size: 4rem;
-                margin-top: 50px;
-              }
+                 nav a {
+                     color: #fff;
+                     padding: 10px;
+                 }
 
-              .hero button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 14px 20px;
-                margin: 8px 0;
-                border: none;
-                cursor: pointer;
-                width: 200px;
-                opacity: 0.9;
-              }
+                 nav a:hover {
+                     background-color: #ddd;
+                 }
 
-              .hero button:hover {
-                opacity: 1;
-              }
+                 .hero {
+                     height: 50vh;
+                     background-image: url('watch.jpg');
+                     background-size: cover;
+                     background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
+                     font-size: 2rem;
+                 }
 
-              /* Features */
-              .features {
-                background-color: #f1f1f1;
-                padding: 60px;
-              }
+                 .hero button {
+                     background-color: #fff;
+                     color: #f1c40f;
+                     border: none;
+                     padding: 10px 20px;
+                     cursor: pointer;
+                 }
 
-              .features h2 {
-                text-align: center;
-                margin-bottom: 30px;
-              }
+                 .features {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                     flex-wrap: wrap;
+                     padding: 50px;
+                 }
 
-              .features ul {
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-              }
+                 .feature {
+                     width: 30%;
+                     text-align: center;
+                     margin: 20px;
+                     background-color: #f2f2f2;
+                     padding: 20px;
+                     border-radius: 5px;
+                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                 }
 
-              .features li {
-                width: 30%;
-                margin-bottom: 30px;
-                text-align: center;
-              }
+                 .feature h2 {
+                     margin: 0;
+                 }
 
-              .features li:nth-child(even) {
-                background-color: #f9f9f9;
-              }
+                 .feature p {
+                     margin: 10px 0;
+                 }
 
-              /* Pricing */
-              .pricing {
-                background-color: #ddd;
-                padding: 60px;
-              }
+                 .pricing {
+                     background-color: #ddd;
+                     padding: 50px;
+                 }
 
-              .pricing h2 {
-                text-align: center;
-                margin-bottom: 30px;
-              }
+                 .pricing table {
+                     width: 100%;
+                     border-collapse: collapse;
+                 }
 
-              .pricing ul {
-                display: flex;
-                justify-content: space-around;
-              }
+                 .pricing th,
+                 .pricing td {
+                     border: 1px solid #ccc;
+                     padding: 15px;
+                     text-align: left;
+                 }
 
-              .pricing li {
-                width: 30%;
-                text-align: center;
-                padding: 20px;
-                background-color: #fff;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-              }
+                 .pricing th {
+                     background-color: #f2f2f2;
+                 }
 
-              .pricing li:hover {
-                background-color: #f4f4f4;
-              }
+                 .pricing tr:nth-child(even) {
+                     background-color: #f2f2f2;
+                 }
 
-              /* Banner */
-              .banner {
-                background-color: #333;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-              }
+                 .pricing tr:hover {
+                     background-color: #ddd;
+                 }
 
-              /* FAQ */
-              .faq {
-                padding: 60px;
-              }
+                 .banner {
+                     background-color: #f1c40f;
+                     padding: 20px;
+                     text-align: center;
+                     color: #fff;
+                 }
 
-              .faq h2 {
-                text-align: center;
-                margin-bottom: 30px;
-              }
+                 .faq {
+                     padding: 50px;
+                 }
 
-              .faq ul {
-                list-style-type: none;
-                padding: 0;
-              }
+                 .faq h2 {
+                     margin: 0;
+                 }
 
-              .faq li {
-                margin-bottom: 20px;
-              }
+                 .faq ul {
+                     padding: 0;
+                 }
 
-              .faq li:before {
-                content: "\2014";
-                color: #777;
-                margin-right: 10px;
-              }
+                 .faq li {
+                     margin: 10px 0;
+                 }
 
-              /* Footer */
-              footer {
-                background-color: #333;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-              }
+                 .faq p {
+                     margin: 0;
+                 }
 
-              footer a {
-                color: #fff;
-                text-decoration: none;
-                margin: 0 10px;
-              }
+                 .footer {
+                     background-color: #333;
+                     color: #fff;
+                     padding: 20px;
+                 }
 
-              footer a:hover {
-                color: #ccc;
-              }
-            </style>
-          </head>
-          <body>
-            <header>
-              <nav>
-                <a href="#hero">Home</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-              </nav>
-            </header>
-            <section class="hero">
-              <h1>Get Your Groceries Delivered</h1>
-              <button>Order Now</button>
-            </section>
-            <section id="features" class="features">
-              <h2>Key Features</h2>
-              <ul>
-                <li>
-                  <h3>Fresh Produce</h3>
-                  <p>We source only the freshest fruits and vegetables from local farms.</p>
-                </li>
-                <li>
-                  <h3>Wide Selection</h3>
-                  <p>Choose from a wide range of products, including dairy, meat, and household items.</p>
-                </li>
-                <li>
-                  <h3>Convenient Delivery</h3>
-                  <p>We deliver to your doorstep at a time that suits you.</p>
-                </li>
-              </ul>
-            </section>
-            <section id="pricing" class="pricing">
-              <h2>Pricing Plans</h2>
-              <ul>
-                <li>
-                  <h3>Basic</h3>
-                  <p>$29.99/month</p>
-                  <ul>
-                    <li>Delivery fee waived</li>
-                    <li>10% discount on orders over $50</li>
-                  </ul>
-                </li>
-                <li>
-                  <h3>Premium</h3>
-                  <p>$49.99/month</p>
-                  <ul>
-                    <li>Free delivery</li>
-                    <li>15% discount on orders over $50</li>
-                  </ul>
-                </li>
-                <li>
-                  <h3>VIP</h3>
-                  <p>$99.99/month</p>
-                  <ul>
-                    <li>Free delivery</li>
-                    <li>20% discount on orders over $50</li>
-                    <li>Priority customer support</li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
-            <section class="banner">
-              <h2>Limited Time Offer!</h2>
-              <p>Sign up for our Premium plan now and get a free month!</p>
-            </section>
-            <section id="faq" class="faq">
-              <h2>Frequently Asked Questions</h2>
-              <ul>
-                <li>
-                  <details>
-                    <summary>How long does delivery take?</summary>
-                    <p>
-                      Delivery times vary depending on your location and the time of day. Please allow 2-3 hours for delivery.
-                    </p>
-                  </details>
-                </li>
-                <li>
-                  <details>
-                    <summary>What if I'm not home when my order arrives?</summary>
-                    <p>
-                      You can leave special instructions for the delivery driver in the checkout process. We'll make sure your groceries are safely delivered.
-                    </p>
-                  </details>
-                </li>
-                <li>
-                  <details>
-                    <summary>Can I cancel or modify my order?</summary>
-                    <p>
-                      Yes, you can cancel or modify your order up until the delivery driver arrives. Please contact customer support for assistance.
-                    </p>
-                  </details>
-                </li>
-              </ul>
-            </section>
-            <footer>
-              <p>&copy; 2022 Grocery Delivery Service. All rights reserved.</p>
-              <a href="#">Terms of Service</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Contact Us</a>
-            </footer>
-          </body>
-        </html>
+                 .footer ul {
+                     list-style: none;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
+
+                 .footer li a {
+                     color: #ccc;
+                     margin-right: 10px;
+                 }
+
+                 .footer li a:hover {
+                     color: #fff;
+                 }
+
+                 .social-media {
+                     display: flex;
+                 }
+
+                 .social-media a {
+                     color: #ccc;
+                     margin-right: 10px;
+                     font-size: 1.5rem;
+                 }
+
+                 .social-media a:hover {
+                     color: #fff;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <nav>
+                     <a href="#">Home</a>
+                     <a href="#features">Features</a>
+                     <a href="#pricing">Pricing</a>
+                     <a href="#faq">FAQ</a>
+                 </nav>
+             </header>
+             <section class="hero">
+                 <h1>Discover Our Modern Timepieces</h1>
+                 <button>Shop Now</button>
+             </section>
+             <section id="features" class="features">
+                 <div class="feature">
+                     <h2>Sleek Design</h2>
+                     <p>Our watches feature a minimalist, modern design that complements any outfit or occasion.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>Durable Materials</h2>
+                     <p>We use high-quality materials like stainless steel and scratch-resistant glass to ensure your watch lasts a lifetime.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>Customizable</h2>
+                     <p>Choose from a variety of strap colors and face designs to create a watch that's uniquely yours.</p>
+                 </div>
+             </section>
+             <section id="pricing" class="pricing">
+                 <h2>Pricing</h2>
+                 <table>
+                     <thead>
+                         <tr>
+                             <th>Model</th>
+                             <th>Price</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Classic</td>
+                             <td>$150</td>
+                         </tr>
+                         <tr>
+                             <td>Sport</td>
+                             <td>$200</td>
+                         </tr>
+                         <tr>
+                             <td>Premium</td>
+                             <td>$300</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </section>
+             <section id="faq" class="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <ul>
+                     <li>
+                         <h3>What materials are your watches made of?</h3>
+                         <p>Our watches are made of high-quality stainless steel and scratch-resistant glass.</p>
+                     </li>
+                     <li>
+                         <h3>Can I customize my watch?</h3>
+                         <p>Yes, you can choose from a variety of strap colors and face designs to create a watch that's uniquely yours.</p>
+                     </li>
+                     <li>
+                         <h3>What is your return policy?</h3>
+                         <p>We offer a 30-day money-back guarantee on all purchases.</p>
+                     </li>
+                 </ul>
+             </section>
+             <section class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Get 10% off your first purchase with code WELCOME10.</p>
+             </section>
+             <footer>
+                 <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#features">Features</a></li>
+                     <li><a href="#pricing">Pricing</a></li>
+                     <li><a href="#faq">FAQ</a></li>
+                 </ul>
+                 <div class="social-media">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>
+             </footer>
+         </body>
+         </html>

@@ -1,7 +1,7 @@
 import utils
 import streamlit as st
 import streamlit.components.v1 as comps
-
+import time
 
 def main():
     st.title('Website Builder')
@@ -13,9 +13,9 @@ def main():
         utils.write_to_file(code)
         utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
         website_url=utils.deploy_render_api()
-        
+        # time.sleep(150)
+        st.text(f'website Link: {website_url}')
         comps.iframe(website_url, height=500, scrolling=True)
-        st.text(f'Hosted Link: {website_url}')
 
 if __name__ == "__main__":
     main()
