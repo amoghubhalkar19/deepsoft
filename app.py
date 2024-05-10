@@ -18,7 +18,7 @@ def main():
         # Show website URL and iframe once deployment is complete
         st.write(f'Website Link: {website_url}')
         st.write("Here's your website:")
-        st.components.v1.iframe(website_url, height=500, scrolling=True)
+        comps.iframe(website_url, height=500, scrolling=True)
 
 if __name__ == "__main__":
     main()
