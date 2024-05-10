@@ -1,341 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groceries Delivered</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Credit Card Company - Platinum Card</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
+                 body {
+                     font-family: 'Roboto', sans-serif;
+                     line-height: 1.6;
+                 }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+                 a {
+                     text-decoration: none;
+                     color: #333;
+                 }
 
-        ul {
-            list-style: none;
-        }
+                 ul {
+                     list-style: none;
+                 }
 
-        .container {
-            max-width: 1140px;
-            margin: auto;
-            padding: 20px;
-        }
+                 .container {
+                     max-width: 1100px;
+                     margin: 0 auto;
+                     padding: 20px;
+                 }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
+                 header {
+                     background-color: #f1c40f;
+                     padding: 20px;
+                 }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+                 header h1 {
+                     margin: 0;
+                     color: #fff;
+                 }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+                 nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
 
-        nav ul {
-            display: flex;
-        }
+                 nav ul {
+                     display: flex;
+                 }
 
-        nav ul li {
-            margin-right: 20px;
-        }
+                 nav ul li {
+                     margin-right: 20px;
+                 }
 
-        .hero {
-            height: 100vh;
-            background-image: url('https://source.unsplash.com/random/groceries,food,fruit');
-            background-size: cover;
-            background-position: center;
-        }
+                 .hero {
+                     height: 50vh;
+                     background-image: url('platinum-card.jpg');
+                     background-size: cover;
+                     background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
+                     font-size: 2rem;
+                 }
 
-        .hero h1 {
-            color: #fff;
-            font-size: 48px;
-            text-align: center;
-            margin-top: 100px;
-        }
+                 .hero button {
+                     background-color: #fff;
+                     color: #f1c40f;
+                     border: none;
+                     padding: 10px 20px;
+                     cursor: pointer;
+                 }
 
-        .hero button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 200px;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
+                 .features {
+                     background-color: #f5f5f5;
+                     padding: 50px;
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                 }
 
-        .hero button:hover {
-            opacity: 1;
-        }
+                 .features div {
+                     width: 30%;
+                     text-align: center;
+                 }
 
-        .features {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 80px 0;
-        }
+                 .features h3 {
+                     margin: 0;
+                     color: #333;
+                 }
 
-        .features div {
-            width: 30%;
-            margin-bottom: 50px;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
-        }
+                 .features p {
+                     margin: 10px 0;
+                     color: #666;
+                 }
 
-        .features h2 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-        }
+                 .pricing {
+                     background-color: #333;
+                     padding: 50px;
+                     color: #fff;
+                 }
 
-        .features p {
-            margin: 10px 0;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #666;
-        }
+                 .pricing table {
+                     width: 100%;
+                     border-collapse: collapse;
+                 }
 
-        .pricing {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 80px 0;
-        }
+                 .pricing th,
+                 .pricing td {
+                     text-align: left;
+                     padding: 8px;
+                     border-bottom: 1px solid #ddd;
+                 }
 
-        .pricing div {
-            width: 30%;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
-        }
+                 .pricing th {
+                     background-color: #4CAF50;
+                     color: white;
+                 }
 
-        .pricing h2 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-        }
+                 .pricing tr:hover {
+                     background-color: #f5f5f5;
+                 }
 
-        .pricing p {
-            margin: 10px 0;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #666;
-        }
+                 .banner {
+                     background-color: #f1c40f;
+                     padding: 20px;
+                     text-align: center;
+                 }
 
-        .pricing .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
+                 .faq {
+                     background-color: #f5f5f5;
+                     padding: 50px;
+                 }
 
-        .pricing .button:hover {
-            opacity: 1;
-        }
+                 .faq h2 {
+                     margin: 0;
+                 }
 
-        .banner {
-            background-color: #333;
-            color: #fff;
-            padding: 50px;
-            text-align: center;
-        }
+                 .faq ul {
+                     padding: 0;
+                     list-style: none;
+                 }
 
-        .banner h2 {
-            margin: 0;
-            font-size: 32px;
-        }
+                 .faq li {
+                     margin-bottom: 20px;
+                 }
 
-        .banner p {
-            margin: 10px 0;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #666;
-        }
+                 .faq p {
+                     margin: 0;
+                 }
 
-        .faq {
-            padding: 80px 0;
-        }
+                 .footer {
+                     background-color: #333;
+                     padding: 20px;
+                     color: #fff;
+                     text-align: center;
+                 }
 
-        .faq h2 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-        }
+                 .footer ul {
+                     padding: 0;
+                     list-style: none;
+                     display: flex;
+                     justify-content: space-around;
+                 }
 
-        .faq ul {
-            padding: 0;
-            list-style: none;
-        }
+                 .footer li {
+                     margin-bottom: 10px;
+                 }
 
-        .faq li {
-            margin-bottom: 20px;
-        }
+                 .footer a {
+                     color: #fff;
+                     text-decoration: none;
+                 }
 
-        .faq li:before {
-            content: 'Q:';
-            margin-right: 10px;
-            color: #666;
-        }
-
-        .faq li p {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #333;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 16px;
-            color: #666;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media screen and (max-width: 768px) {
-            .features div {
-                width: 100%;
-            }
-
-            .pricing div {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Groceries Delivered</h1>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="hero">
-        <h1>Get your groceries delivered to your doorstep</h1>
-        <button>Sign Up Now</button>
-    </section>
-
-    <section class="features" id="features">
-        <div>
-            <h2>Fast Delivery</h2>
-            <p>We deliver your groceries within 2 hours of ordering</p>
-        </div>
-        <div>
-            <h2>Wide Selection</h2>
-            <p>Choose from a wide range of fresh fruits, vegetables, and pantry staples</p>
-        </div>
-        <div>
-            <h2>Convenient</h2>
-            <p>Save time and energy by having your groceries delivered to your doorstep</p>
-        </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div>
-            <h2>Basic</h2>
-            <p>$25/month</p>
-            <button>Sign Up</button>
-        </div>
-        <div>
-            <h2>Standard</h2>
-            <p>$35/month</p>
-            <button>Sign Up</button>
-        </div>
-        <div>
-            <h2>Premium</h2>
-            <p>$50/month</p>
-            <button>Sign Up</button>
-        </div>
-    </section>
-
-    <section class="banner">
-        <h2>Limited Time Offer!</h2>
-        <p>Sign up for our Premium plan and get a free delivery for the first month</p>
-    </section>
-
-    <section class="faq" id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <ul>
-            <li>
-                <p>Q: What is Groceries Delivered?</p>
-                <p>A: Groceries Delivered is a grocery delivery service that brings fresh fruits, vegetables, and pantry staples to your doorstep within 2 hours of ordering.</p>
-            </li>
-            <li>
-                <p>Q: How much does it cost?</p>
-                <p>A: We have three pricing plans: Basic ($25/month), Standard ($35/month), and Premium ($50/month).</p>
-            </li>
-            <li>
-                <p>Q: What is the delivery fee?</p>
-                <p>A: The delivery fee is included in the pricing plans.</p>
-            </li>
-            <li>
-                <p>Q: What if I'm not home when my groceries are delivered?</p>
-                <p>A: You can leave special instructions for the delivery driver in the checkout process.</p>
-            </li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Groceries Delivered. All rights reserved.</p>
-        <p>Contact Us: <a href="mailto:contact@groceriesdelivered.com">contact@groceriesdelivered.com</a></p>
-        <p>Follow us on:</p>
-        <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-    </footer>
-</body>
-</html>
+                 .footer a:hover {
+                     color: #ccc;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <h1>Platinum Card</h1>
+                 <nav>
+                     <ul>
+                         <li><a href="#hero">Home</a></li>
+                         <li><a href="#features">Features</a></li>
+                         <li><a href="#pricing">Pricing</a></li>
+                         <li><a href="#faq">FAQ</a></li>
+                     </ul>
+                 </nav>
+             </header>
+             <section id="hero" class="hero">
+                 <h1>Get Your Platinum Card Today</h1>
+                 <button>Apply Now</button>
+             </section>
+             <section id="features" class="container features">
+                 <div>
+                     <h3>Rewards Program</h3>
+                     <p>Earn points for every purchase and redeem them for travel, merchandise, and more.</p>
+                 </div>
+                 <div>
+                     <h3>Travel Perks</h3>
+                     <p>Get exclusive discounts on flights, hotels, and car rentals.</p>
+                 </div>
+                 <div>
+                     <h3>24/7 Customer Service</h3>
+                     <p>Our dedicated team is always available to help you with any questions or concerns.</p>
+                 </div>
+             </section>
+             <section id="pricing" class="pricing">
+                 <h2>Pricing Plans</h2>
+                 <table>
+                     <thead>
+                         <tr>
+                             <th>Plan</th>
+                             <th>Monthly Fee</th>
+                             <th>Interest Rate</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Basic</td>
+                             <td>$25</td>
+                             <td>15.99%</td>
+                         </tr>
+                         <tr>
+                             <td>Standard</td>
+                             <td>$50</td>
+                             <td>12.99%</td>
+                         </tr>
+                         <tr>
+                             <td>Premium</td>
+                             <td>$75</td>
+                             <td>10.99%</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </section>
+             <section id="banner" class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Sign up for a Platinum Card and get a $100 gift card to your favorite retailer.</p>
+             </section>
+             <section id="faq" class="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <ul>
+                     <li>
+                         <h3>What is the Platinum Card?</h3>
+                         <p>The Platinum Card is a premium credit card offering exclusive rewards, travel perks, and 24/7 customer service.</p>
+                     </li>
+                     <li>
+                         <h3>How do I apply for a Platinum Card?</h3>
+                         <p>You can apply online by clicking the "Apply Now" button on our homepage or by calling our customer service team at 1-800-PLATINUM.</p>
+                     </li>
+                     <li>
+                         <h3>What are the benefits of having a Platinum Card?</h3>
+                         <p>Benefits include earning points for every purchase, exclusive discounts on travel, and 24/7 customer service.</p>
+                     </li>
+                 </ul>
+             </section>
+             <footer class="footer">
+                 <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Features</a></li>
+                     <li><a href="#">Pricing</a></li>
+                     <li><a href="#">FAQ</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                 </ul>
+                 <p>&copy; 2022 Credit Card Company. All rights reserved.</p>
+             </footer>
+         </body>
+         </html>
