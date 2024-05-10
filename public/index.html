@@ -1,256 +1,281 @@
 <!DOCTYPE html>
-         <html lang="en">
-         <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Credit Card Company</title>
-             <style>
-                 * {
-                     margin: 0;
-                     padding: 0;
-                     box-sizing: border-box;
-                 }
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Grocery Delivery Service</title>
+            <style>
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
 
-                 body {
-                     font-family: 'Roboto', sans-serif;
-                     line-height: 1.6;
-                 }
+              body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+              }
 
-                 /* Header */
-                 header {
-                     background-color: #3498db;
-                     color: #fff;
-                     padding: 20px;
-                 }
+              /* Header */
+              header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+              }
 
-                 header nav {
-                     display: flex;
-                     justify-content: space-between;
-                     align-items: center;
-                 }
+              header nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
 
-                 header nav a {
-                     color: #fff;
-                     text-decoration: none;
-                     padding: 10px;
-                 }
+              header nav a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+              }
 
-                 header nav a:hover {
-                     background-color: #5e5e5e;
-                 }
+              header nav a:hover {
+                background-color: #555;
+              }
 
-                 /* Hero */
-                 .hero {
-                     height: 100vh;
-                     background-image: url('card.jpg');
-                     background-size: cover;
-                     background-position: center;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     text-align: center;
-                     color: #fff;
-                     font-size: 2rem;
-                 }
+              /* Hero */
+              .hero {
+                height: 100vh;
+                background-image: url("https://source.unsplash.com/random/food,grocery");
+                background-size: cover;
+                background-position: center;
+              }
 
-                 .hero button {
-                     background-color: #fff;
-                     color: #3498db;
-                     border: none;
-                     padding: 10px 20px;
-                     cursor: pointer;
-                 }
+              .hero h1 {
+                color: #fff;
+                text-align: center;
+                font-size: 4rem;
+                margin-top: 50px;
+              }
 
-                 .hero button:hover {
-                     background-color: #3498db;
-                     color: #fff;
-                 }
+              .hero button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 200px;
+                opacity: 0.9;
+              }
 
-                 /* Features */
-                 .features {
-                     background-color: #f4f4f4;
-                     padding: 50px;
-                 }
+              .hero button:hover {
+                opacity: 1;
+              }
 
-                 .features h2 {
-                     text-align: center;
-                     margin-bottom: 30px;
-                 }
+              /* Features */
+              .features {
+                background-color: #f1f1f1;
+                padding: 60px;
+              }
 
-                 .features ul {
-                     display: flex;
-                     justify-content: space-around;
-                     align-items: center;
-                 }
+              .features h2 {
+                text-align: center;
+                margin-bottom: 30px;
+              }
 
-                 .features li {
-                     width: 30%;
-                     text-align: center;
-                     margin-bottom: 30px;
-                 }
+              .features ul {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+              }
 
-                 .features li:last-child {
-                     margin-bottom: 0;
-                 }
+              .features li {
+                width: 30%;
+                margin-bottom: 30px;
+                text-align: center;
+              }
 
-                 /* Pricing */
-                 .pricing {
-                     background-color: #3498db;
-                     padding: 50px;
-                     color: #fff;
-                 }
+              .features li:nth-child(even) {
+                background-color: #f9f9f9;
+              }
 
-                 .pricing h2 {
-                     text-align: center;
-                     margin-bottom: 30px;
-                 }
+              /* Pricing */
+              .pricing {
+                background-color: #ddd;
+                padding: 60px;
+              }
 
-                 .pricing ul {
-                     display: flex;
-                     justify-content: space-around;
-                     align-items: center;
-                 }
+              .pricing h2 {
+                text-align: center;
+                margin-bottom: 30px;
+              }
 
-                 .pricing li {
-                     width: 30%;
-                     text-align: center;
-                     margin-bottom: 30px;
-                 }
+              .pricing ul {
+                display: flex;
+                justify-content: space-around;
+              }
 
-                 .pricing li:last-child {
-                     margin-bottom: 0;
-                 }
+              .pricing li {
+                width: 30%;
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              }
 
-                 /* Banner */
-                 .banner {
-                     background-color: #3498db;
-                     color: #fff;
-                     padding: 50px;
-                     text-align: center;
-                 }
+              .pricing li:hover {
+                background-color: #f4f4f4;
+              }
 
-                 /* FAQ */
-                 .faq {
-                     padding: 50px;
-                 }
+              /* Banner */
+              .banner {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+              }
 
-                 .faq h2 {
-                     text-align: center;
-                     margin-bottom: 30px;
-                 }
+              /* FAQ */
+              .faq {
+                padding: 60px;
+              }
 
-                 .faq ul {
-                     list-style-type: none;
-                     padding: 0;
-                 }
+              .faq h2 {
+                text-align: center;
+                margin-bottom: 30px;
+              }
 
-                 .faq li {
-                     border-bottom: 1px solid #ccc;
-                     padding: 20px;
-                     cursor: pointer;
-                 }
+              .faq ul {
+                list-style-type: none;
+                padding: 0;
+              }
 
-                 .faq li:last-child {
-                     border-bottom: none;
-                 }
+              .faq li {
+                margin-bottom: 20px;
+              }
 
-                 .faq li:hover {
-                     background-color: #f4f4f4;
-                 }
+              .faq li:before {
+                content: "\2014";
+                color: #777;
+                margin-right: 10px;
+              }
 
-                 /* Footer */
-                 footer {
-                     background-color: #3498db;
-                     color: #fff;
-                     padding: 20px;
-                     text-align: center;
-                 }
+              /* Footer */
+              footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+              }
 
-                 footer a {
-                     color: #fff;
-                     text-decoration: none;
-                     margin: 0 10px;
-                 }
+              footer a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+              }
 
-                 footer a:hover {
-                     color: #ccc;
-                 }
-             </style>
-         </head>
-         <body>
-             <header>
-                 <nav>
-                     <a href="#hero">Home</a>
-                     <a href="#features">Features</a>
-                     <a href="#pricing">Pricing</a>
-                     <a href="#faq">FAQ</a>
-                 </nav>
-             </header>
-             <section class="hero" id="hero">
-                 <h1>Welcome to Our Credit Card Company</h1>
-                 <button>Apply Now</button>
-             </section>
-             <section class="features" id="features">
-                 <h2>Key Features</h2>
-                 <ul>
-                     <li>Rewards Program</li>
-                     <li>Low Interest Rates</li>
-                     <li>No Annual Fees</li>
-                     <li>24/7 Customer Support</li>
-                 </ul>
-             </section>
-             <section class="pricing" id="pricing">
-                 <h2>Pricing Plans</h2>
-                 <ul>
-                     <li>
-                         <h3>Basic</h3>
-                         <p>$0/month</p>
-                         <button>Sign Up</button>
-                     </li>
-                     <li>
-                         <h3>Standard</h3>
-                         <p>$10/month</p>
-                         <button>Sign Up</button>
-                     </li>
-                     <li>
-                         <h3>Premium</h3>
-                         <p>$20/month</p>
-                         <button>Sign Up</button>
-                     </li>
-                 </ul>
-             </section>
-             <section class="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Sign up for our Premium card and get a free gift worth $50.</p>
-             </section>
-             <section class="faq" id="faq">
-                 <h2>Frequently Asked Questions</h2>
-                 <ul>
-                     <li>
-                         <details>
-                             <summary>How do I apply for a credit card?</summary>
-                             <p>You can apply for a credit card by clicking the "Apply Now" button on our homepage and following the instructions.</p>
-                         </details>
-                     </li>
-                     <li>
-                         <details>
-                             <summary>What is the interest rate for the credit card?</summary>
-                             <p>Our interest rates vary depending on the pricing plan you choose.</p>
-                         </details>
-                     </li>
-                     <li>
-                         <details>
-                             <summary>Can I check my credit score before applying?</summary>
-                             <p>Yes, you can check your credit score for free before applying for a credit card.</p>
-                         </details>
-                     </li>
-                 </ul>
-             </section>
-             <footer>
-                 <p>&copy; 2022 Credit Card Company. All rights reserved.</p>
-                 <a href="#">Terms of Service</a>
-                 <a href="#">Privacy Policy</a>
-                 <a href="#">Contact Us</a>
-             </footer>
-         </body>
-         </html>
+              footer a:hover {
+                color: #ccc;
+              }
+            </style>
+          </head>
+          <body>
+            <header>
+              <nav>
+                <a href="#hero">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+              </nav>
+            </header>
+            <section class="hero">
+              <h1>Get Your Groceries Delivered</h1>
+              <button>Order Now</button>
+            </section>
+            <section id="features" class="features">
+              <h2>Key Features</h2>
+              <ul>
+                <li>
+                  <h3>Fresh Produce</h3>
+                  <p>We source only the freshest fruits and vegetables from local farms.</p>
+                </li>
+                <li>
+                  <h3>Wide Selection</h3>
+                  <p>Choose from a wide range of products, including dairy, meat, and household items.</p>
+                </li>
+                <li>
+                  <h3>Convenient Delivery</h3>
+                  <p>We deliver to your doorstep at a time that suits you.</p>
+                </li>
+              </ul>
+            </section>
+            <section id="pricing" class="pricing">
+              <h2>Pricing Plans</h2>
+              <ul>
+                <li>
+                  <h3>Basic</h3>
+                  <p>$29.99/month</p>
+                  <ul>
+                    <li>Delivery fee waived</li>
+                    <li>10% discount on orders over $50</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3>Premium</h3>
+                  <p>$49.99/month</p>
+                  <ul>
+                    <li>Free delivery</li>
+                    <li>15% discount on orders over $50</li>
+                  </ul>
+                </li>
+                <li>
+                  <h3>VIP</h3>
+                  <p>$99.99/month</p>
+                  <ul>
+                    <li>Free delivery</li>
+                    <li>20% discount on orders over $50</li>
+                    <li>Priority customer support</li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+            <section class="banner">
+              <h2>Limited Time Offer!</h2>
+              <p>Sign up for our Premium plan now and get a free month!</p>
+            </section>
+            <section id="faq" class="faq">
+              <h2>Frequently Asked Questions</h2>
+              <ul>
+                <li>
+                  <details>
+                    <summary>How long does delivery take?</summary>
+                    <p>
+                      Delivery times vary depending on your location and the time of day. Please allow 2-3 hours for delivery.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>What if I'm not home when my order arrives?</summary>
+                    <p>
+                      You can leave special instructions for the delivery driver in the checkout process. We'll make sure your groceries are safely delivered.
+                    </p>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>Can I cancel or modify my order?</summary>
+                    <p>
+                      Yes, you can cancel or modify your order up until the delivery driver arrives. Please contact customer support for assistance.
+                    </p>
+                  </details>
+                </li>
+              </ul>
+            </section>
+            <footer>
+              <p>&copy; 2022 Grocery Delivery Service. All rights reserved.</p>
+              <a href="#">Terms of Service</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Contact Us</a>
+            </footer>
+          </body>
+        </html>
