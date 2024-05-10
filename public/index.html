@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Name</title>
+    <title>FreshBasket - Your Online Grocery Store</title>
     <style>
         * {
             margin: 0;
@@ -32,31 +32,35 @@
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background-color: #3498db;
+        .header {
+            background-color: #333;
+            color: #fff;
             padding: 20px;
         }
 
-        header nav {
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .header nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header nav a {
+        .header nav a {
             color: #fff;
             padding: 10px;
         }
 
-        header nav a:hover {
-            background-color: #4e54c6;
+        .header nav a:hover {
+            background-color: #555;
         }
 
-        /* Hero */
         .hero {
-            height: 100vh;
-            background-image: url('product-image.jpg');
+            height: 500px;
+            background-image: url('https://source.unsplash.com/random/food,grocery,vegetables,fruit');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -64,137 +68,166 @@
             align-items: center;
             text-align: center;
             color: #fff;
-            font-size: 2rem;
+            font-size: 32px;
         }
 
         .hero button {
-            background-color: #4e54c6;
-            color: #fff;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
             border: none;
-            padding: 10px 20px;
             cursor: pointer;
+            width: 200px;
         }
 
         .hero button:hover {
-            background-color: #3498db;
+            opacity: 0.8;
         }
 
-        /* Features */
         .features {
+            background-color: #f1f1f1;
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features ul {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             flex-wrap: wrap;
-            padding: 50px;
         }
 
-        .feature {
+        .features li {
             width: 30%;
             text-align: center;
             margin-bottom: 50px;
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .feature h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        .feature p {
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Pricing */
-        .pricing {
-            background-color: #f5f5f5;
-            padding: 50px;
-        }
-
-        .pricing table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .pricing th,
-        .pricing td {
-            border: 1px solid #ddd;
-            padding: 15px;
+        .features li:nth-child(even) {
             text-align: left;
         }
 
-        .pricing th {
-            background-color: #4e54c6;
+        .features li img {
+            width: 100%;
+            height: auto;
+        }
+
+        .pricing {
+            background-color: #333;
             color: #fff;
+            padding: 80px 0;
         }
 
-        .pricing tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .pricing tr:hover {
-            background-color: #ddd;
-        }
-
-        /* Banner */
-        .banner {
-            background-color: #3498db;
-            padding: 50px;
+        .pricing h2 {
             text-align: center;
-            color: #fff;
+            margin-bottom: 50px;
         }
 
-        /* FAQ */
-        .faq {
-            padding: 50px;
-        }
-
-        .faq h2 {
-            margin: 0;
-        }
-
-        .faq ul {
-            padding: 0;
+        .pricing ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             list-style: none;
         }
 
-        .faq li {
-            margin-bottom: 20px;
+        .pricing li {
+            width: 30%;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 50px;
+            border: 1px solid #ddd;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .faq li:before {
-            content: 'Q:';
-            display: inline-block;
-            width: 20px;
-            margin-right: 10px;
-        }
-
-        .faq li p {
+        .pricing li h3 {
             margin: 0;
+            font-size: 24px;
         }
 
-        /* Footer */
-        footer {
-            background-color: #3498db;
-            padding: 20px;
+        .pricing li p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .banner {
+            background-color: #333;
             color: #fff;
+            padding: 80px 0;
             text-align: center;
         }
 
-        footer a {
+        .faq {
+            background-color: #f1f1f1;
+            padding: 80px 0;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faq ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .faq li {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .faq li:last-child {
+            border-bottom: none;
+        }
+
+        .faq li:hover {
+            background-color: #f5f5f5;
+        }
+
+        .faq li:before {
+            content: '\f0d7';
+            font-size: 24px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .faq li:last-child:before {
+            content: none;
+        }
+
+        .footer {
+            background-color: #333;
             color: #fff;
-            margin: 0 5px;
+            padding: 80px 0;
+            text-align: center;
         }
 
-        footer a:hover {
-            color: #ddd;
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
-        /* Media Queries */
+        .footer a:hover {
+            color: #ccc;
+        }
+
+        .footer i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
         @media screen and (max-width: 768px) {
-            .features .feature {
+            .features li {
                 width: 100%;
             }
         }
@@ -202,8 +235,8 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+    <header class="header">
+        <h1>FreshBasket</h1>
         <nav>
             <a href="#hero">Home</a>
             <a href="#features">Features</a>
@@ -213,90 +246,99 @@
         </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Product Name</h1>
-        <button>Buy Now</button>
+    <section class="hero" id="hero">
+        <h1>Shop Fresh Groceries Online</h1>
+        <button>Get Started</button>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-        <div class="feature">
-            <h2>Feature 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-        <div class="feature">
-            <h2>Feature 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-        <div class="feature">
-            <h2>Feature 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing">
-        <table>
-            <thead>
-                <tr>
-                    <th>Plan</th>
-                    <th>Price</th>
-                    <th>Features</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Basic</td>
-                    <td>$9.99/month</td>
-                    <td>Feature 1, Feature 2</td>
-                </tr>
-                <tr>
-                    <td>Pro</td>
-                    <td>$19.99/month</td>
-                    <td>Feature 1, Feature 2, Feature 3</td>
-                </tr>
-                <tr>
-                    <td>Premium</td>
-                    <td>$29.99/month</td>
-                    <td>Feature 1, Feature 2, Feature 3, Feature 4</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Banner -->
-    <section class="banner">
-        <h1>Limited Time Offer!</h1>
-        <p>Get 20% off your first purchase with code NEW20</p>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <h2>Frequently Asked Questions</h2>
+    <section class="features" id="features">
+        <h2>Why Choose FreshBasket?</h2>
         <ul>
             <li>
-                <p>Q: What is Product Name?</p>
-                <p>A: Product Name is a revolutionary new product that will change the way you live, work, and play.</p>
+                <img src="https://source.unsplash.com/random/vegetables,fruit" alt="Fresh Produce">
+                <h3>Fresh Produce</h3>
+                <p>We source the freshest fruits and vegetables from local farms and trusted suppliers.</p>
             </li>
             <li>
-                <p>Q: How does Product Name work?</p>
-                <p>A: Product Name uses advanced technology to make your life easier and more efficient.</p>
+                <img src="https://source.unsplash.com/random/grocery,store,shopping" alt="Convenient Shopping">
+                <h3>Convenient Shopping</h3>
+                <p>Shop from the comfort of your home and have your groceries delivered right to your doorstep.</p>
             </li>
             <li>
-                <p>Q: Is Product Name easy to use?</p>
-                <p>A: Yes, Product Name is designed to be user-friendly and intuitive.</p>
+                <img src="https://source.unsplash.com/random/discount,sale,offer" alt="Special Offers">
+                <h3>Special Offers</h3>
+                <p>Take advantage of our exclusive deals and discounts on select items.</p>
             </li>
         </ul>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2022 Product Name. All rights reserved.</p>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Contact Us</a>
+    <section class="pricing" id="pricing">
+        <h2>Our Pricing Plans</h2>
+        <ul>
+            <li>
+                <h3>Basic</h3>
+                <p>$19.99/month</p>
+                <p>10% off on all orders</p>
+            </li>
+            <li>
+                <h3>Standard</h3>
+                <p>$29.99/month</p>
+                <p>15% off on all orders</p>
+            </li>
+            <li>
+                <h3>Premium</h3>
+                <p>$39.99/month</p>
+                <p>20% off on all orders</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="banner">
+        <h2>Limited Time Offer!</h2>
+        <p>Sign up for our Premium plan now and get a free delivery on your first order.</p>
+        <button>Sign Up</button>
+    </section>
+
+    <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>
+                <i class="fas fa-question"></i>
+                <details>
+                    <summary>How does FreshBasket work?</summary>
+                    <p>You can browse our extensive catalog of fresh produce, pantry staples, and household items. Once you've added items to your cart, proceed to checkout and choose your preferred delivery time. We'll handle the rest!</p>
+                </details>
+            </li>
+            <li>
+                <i class="fas fa-truck"></i>
+                <details>
+                    <summary>What are your delivery hours?</summary>
+                    <p>We offer delivery from Monday to Sunday, 9 AM to 9 PM.</p>
+                </details>
+            </li>
+            <li>
+                <i class="fas fa-money-bill-alt"></i>
+                <details>
+                    <summary>Do you offer discounts or coupons?</summary>
+                    <p>Yes, we frequently offer discounts and coupons on select items. Sign up for our newsletter to stay informed.</p>
+                </details>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2022 FreshBasket. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Follow Us</a></li>
+        </ul>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
     </footer>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
