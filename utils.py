@@ -1,7 +1,7 @@
+# function to deploy website on render.com and generating hosted link
+
 import requests
 
-
-# function to deploy website on render.com and generating hosted link
 def deploy_render_api(): #params when integrating as a whole: repo name, api key
     API_KEY = 'rnd_8xSMgp0rGoZ9Ic1YT4XZDq4BQNAq'
     headers = {'Authorization': f'Bearer {API_KEY}'}
@@ -39,27 +39,85 @@ def deploy_render_api(): #params when integrating as a whole: repo name, api key
     service_info_response = requests.get(service_info_url, headers=headers)
     web_url=service_info_response.json()['serviceDetails']['url']
 
-    return deploy_render_api
+    return deploy_render_api, web_url
 
 
 #function for commiting changes on git hub
+
 import subprocess
 
 def git_commit_push(repo_path, commit_message):
     try:
-        # Change directory to the repository path
         subprocess.run(["git", "-C", repo_path, "add", "-A"], check=True)
-
-        # Commit changes with the provided commit message
         subprocess.run(["git", "-C", repo_path, "commit", "-m", commit_message], check=True)
-
-        # Push changes to the remote repository
         subprocess.run(["git", "-C", repo_path, "push"], check=True)
-
         print("Changes committed and pushed successfully.")
+
     except subprocess.CalledProcessError as e:
         print("Failed to commit and push changes.")
         print(f"Error: {e}")
     
     return git_commit_push
 
+
+#function for generating respsonse from llm and getting the code
+
+from langchain import PromptTemplate, HuggingFaceHub, LLMChain
+
+def generate_code(input_text):
+
+    prompt=PromptTemplate(
+        input_variables=["text"],
+        template='''Task: {text}
+
+            Objective:
+            Design and implement a product website showcasing a fictional product using HTML, CSS, and JavaScript in a single file. The website should have the following sections:
+            Header Section: Create a header section with a navigation menu and any relevant branding elements.
+            Hero Section: Design a hero section that prominently displays the product with a compelling headline and call-to-action button.
+            Features Section: Develop a section that highlights key features of the product using vibrant colors and fonts.
+            Pricing Section: Implement a pricing section that displays different pricing plans or options for the product.
+            Banner: Incorporate a banner section to grab attention and convey important messages or promotions.
+            FAQ Section: Include a frequently asked questions (FAQ) section where users can find answers to common queries about the product.
+            Footer: Create a footer section with links to important pages, social media icons, and any other relevant information.
+            Instructions:
+
+            HTML Structure:
+            Use semantic HTML elements for better accessibility and SEO.
+            Structure the page with appropriate sections and divs for each component.
+            CSS Styling:
+            Apply inline CSS to style each section.
+            Use vibrant colors and modern fonts to enhance visual appeal.
+            Ensure responsive design to optimize for various screen sizes.
+            JavaScript Interactivity:
+            Use JavaScript to add interactivity to the website, such as smooth scrolling, form validation, or interactive elements.
+            Third-Party Libraries/Frameworks:
+            Utilize open-source third-party libraries or frameworks to enhance creativity and functionality if desired. Examples include Bootstrap, jQuery, or Font Awesome.
+            Modern Coding Techniques:
+            Implement modern coding techniques, such as flexbox or grid layout for responsiveness and CSS variables for easier customization.
+            Optimize code for performance and efficiency to ensure fast loading times.
+            Deliverables:
+            Submit a single HTML file containing the complete code for the product website including css and javascript. The website should be visually appealing, user-friendly, and fully functional.
+        '''
+    )
+
+    chain=LLMChain(llm=HuggingFaceHub(repo_id='mistralai/Mistral-7B-Instruct-v0.2', model_kwargs={'temperature':0.1, 'max_new_tokens':8000}, huggingfacehub_api_token="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"), prompt=prompt)
+    code=chain.invoke(input_text)
+    doctype_index = code['text'].find("<!DOCTYPE html>")
+    doctype_index_last=code['text'].find("</html>")
+    final_code=code['text'][doctype_index:doctype_index_last+7]
+
+    return generate_code, final_code
+
+
+#function to write code in the html file 
+
+import os
+
+def write_to_file(code):
+    file_path = os.path.join("public", "index.html")
+    with open(file_path, "w") as file:
+        if isinstance(code, tuple):  # Check if code is a tuple
+            code_str = ' '.join(map(str, code))  # Convert tuple elements to string and join them
+            file.write(code_str)
+        else:
+            file.write(str(code))  # If code is not a tuple, directly convert it to string and write
