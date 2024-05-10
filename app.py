@@ -11,7 +11,7 @@ def main():
         st.write("You entered:", user_text)
         code=utils.generate_code(user_text)
         utils.write_to_file(code)
-        utils.git_commit_push("D:\deepsoft", "changing index.html for current input")
+        utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
         website_url=utils.deploy_render_api()
         
         comps.iframe(website_url, height=500, scrolling=True)
