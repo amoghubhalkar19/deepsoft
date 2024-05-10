@@ -19,7 +19,7 @@ def deploy_render_api(): #params when integrating as a whole: repo name, api key
         "plan": "starter",
         "ownerId": owner_id,
         "repo": {
-        "repoName": "amoghubhalkar19/deepsoft_test",
+        "repoName": "amoghubhalkar19/deepsoft",
             # "deployKeyID": deploy_key
         },
         "buildCommand": "echo 'Build complete'",
