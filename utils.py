@@ -39,7 +39,7 @@ def deploy_render_api(): #params when integrating as a whole: repo name, api key
     service_info_response = requests.get(service_info_url, headers=headers)
     web_url=service_info_response.json()['serviceDetails']['url']
 
-    return deploy_render_api, web_url
+    return web_url
 
 
 #function for commiting changes on git hub
@@ -106,7 +106,7 @@ def generate_code(input_text):
     doctype_index_last=code['text'].find("</html>")
     final_code=code['text'][doctype_index:doctype_index_last+7]
 
-    return generate_code, final_code
+    return final_code
 
 
 #function to write code in the html file 
@@ -116,8 +116,4 @@ import os
 def write_to_file(code):
     file_path = os.path.join("public", "index.html")
     with open(file_path, "w") as file:
-        if isinstance(code, tuple):  # Check if code is a tuple
-            code_str = ' '.join(map(str, code))  # Convert tuple elements to string and join them
-            file.write(code_str)
-        else:
-            file.write(str(code))  # If code is not a tuple, directly convert it to string and write
+        file.write(code)
