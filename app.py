@@ -4,6 +4,28 @@ import streamlit as st
 import streamlit.components.v1 as comps
 import requests
 import os
+import subprocess
+
+def git_commit_push(repo_path, commit_message):
+            try:
+        # Change directory to the repository path
+                # subprocess.run(["cd", repo_path], check=True)
+
+        # Stage all changes
+                subprocess.run(["git", "add", "-A"], check=True)
+
+        # Commit changes with the provided commit message
+                subprocess.run(["git", "commit", "-m", commit_message], check=True)
+
+        # Push changes to the remote repository
+                subprocess.run(["git", "push"], check=True)
+
+                print("Changes committed and pushed successfully.")
+
+            except subprocess.CalledProcessError as e:
+                print("Failed to commit and push changes.")
+                print(f"Error: {e}")
+
 
 def main():
     st.title('Website Builder')
@@ -69,6 +91,11 @@ def main():
             file.write(final_code)
 
         print("Edited the index.html file")
+        #commiting and publishing on github
+
+        repo_path = r'D:\deepsoft'
+        commit_message = "changing index.html"
+        git_commit_push(repo_path, commit_message)
 
         #Deploying using render.com API
 
@@ -87,7 +114,7 @@ def main():
             "plan": "starter",
             "ownerId": owner_id,
             "repo": {
-                "repoName": "amoghubhalkar19/deepsoft_test",
+                "repoName": "amoghubhalkar19/deepsoft",
                 # "deployKeyID": deploy_key
             },
             "buildCommand": "echo 'Build complete'",

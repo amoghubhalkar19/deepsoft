@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchCo - Modern Timepieces</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #4CAF50;
+            --text-color: #333;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .clearfix {
+            clear: both;
+        }
+        .header {
+            background-color: var(--primary-color);
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav a {
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+        }
+        .hero {
+            height: 500px;
+            background-image: url('watch.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+        }
+        .hero p {
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .hero .btn {
+            background-color: #fff;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .hero .btn:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        .features {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+        }
+        .features h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .features ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .features li {
+            width: calc(33.33% - 20px);
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .features li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+        }
+        .features li i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        .pricing {
+            background-color: #333;
+            padding: 100px 0;
+            color: #fff;
+        }
+        .pricing h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .pricing ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+        .pricing li {
+            width: calc(33.33% - 20px);
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .pricing li:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .pricing li p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .pricing li h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .banner {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .banner h2 {
+            margin: 0;
+        }
+        .faq {
+            background-color: #f4f4f4;
+            padding: 100px 0;
+        }
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .faq ul {
+            list-style: none;
+            padding: 0;
+        }
+        .faq li {
+            margin: 0;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        .faq li:last-child {
+            border-bottom: none;
+        }
+        .faq li:hover {
+            background-color: #f4f4f4;
+        }
+        .faq li p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .faq li h3 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #333;
+            padding: 50px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .footer li a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .footer li a:hover {
+            text-decoration: underline;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Contact</a>
+            </nav>
+            <h1>Welcome to WatchCo</h1>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Our Modern Timepieces</h1>
+            <p>Explore our collection of sleek and stylish watches designed for the modern world.</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <h3>Accurate Timekeeping</h3>
+                    <p>Our watches are precision engineered to keep accurate time, ensuring you're always on schedule.</p>
+                </li>
+                <li>
+                    <i class="fas fa-battery-full"></i>
+                    <h3>Long Battery Life</h3>
+                    <p>Our watches have a long battery life, so you won't have to worry about charging them frequently.</p>
+                </li>
+                <li>
+                    <i class="fas fa-water"></i>
+                    <h3>Water Resistant</h3>
+                    <p>Our watches are water resistant, making them perfect for any adventure or activity.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="pricing">
+        <div class="container">
+            <h2>Choose Your Watch</h2>
+            <ul>
+                <li>
+                    <h3>Classic</h3>
+                    <p>$199</p>
+                    <p>Sleek and timeless design, perfect for any occasion.</p>
+                </li>
+                <li>
+                    <h3>Sport</h3>
+                    <p>$249</p>
+                    <p>Durable and rugged, designed for the most active lifestyles.</p>
+                </li>
+                <li>
+                    <h3>Luxury</h3>
+                    <p>$399</p>
+                    <p>Elegant and sophisticated, a statement piece for any collection.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="container">
+            <h2>Limited Time Offer!</h2>
+            <p>Get 20% off your first purchase with code WELCOME20 at checkout.</p>
+        </div>
+    </section>
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li>
+                    <h3>What is the return policy?</h3>
+                    <p>We offer a 30-day money-back guarantee on all purchases.</p>
+                </li>
+                <li>
+                    <h3>How long does shipping take?</h3>
+                    <p>Standard shipping takes 5-7 business days.</p>
+                </li>
+                <li>
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards and PayPal.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2021 WatchCo. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
