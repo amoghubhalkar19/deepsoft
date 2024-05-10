@@ -12,10 +12,13 @@ def main():
         code=utils.generate_code(user_text)
         utils.write_to_file(code)
         utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
-        website_url=utils.deploy_render_api()
-        # time.sleep(150)
-        st.text(f'website Link: {website_url}')
-        comps.iframe(website_url, height=500, scrolling=True)
+        with st.spinner('Deploying website...'):
+            website_url = utils.deploy_render_api()
+
+        # Show website URL and iframe once deployment is complete
+        st.write(f'Website Link: {website_url}')
+        st.write("Here's your website:")
+        st.components.v1.iframe(website_url, height=500, scrolling=True)
 
 if __name__ == "__main__":
     main()
