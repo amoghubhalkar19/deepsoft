@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #3498db;
+            padding: 20px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #fff;
+            padding: 10px;
+        }
+
+        header nav a:hover {
+            background-color: #4e54c6;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background-image: url('product-image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .hero button {
+            background-color: #4e54c6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #3498db;
+        }
+
+        /* Features */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px;
+        }
+
+        .feature {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 50px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .feature p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Pricing */
+        .pricing {
+            background-color: #f5f5f5;
+            padding: 50px;
+        }
+
+        .pricing table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing th,
+        .pricing td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .pricing th {
+            background-color: #4e54c6;
+            color: #fff;
+        }
+
+        .pricing tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .pricing tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Banner */
+        .banner {
+            background-color: #3498db;
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 50px;
+        }
+
+        .faq h2 {
+            margin: 0;
+        }
+
+        .faq ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .faq li {
+            margin-bottom: 20px;
+        }
+
+        .faq li:before {
+            content: 'Q:';
+            display: inline-block;
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .faq li p {
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3498db;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .features .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Product Name</h1>
+        <button>Buy Now</button>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature">
+            <h2>Feature 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        </div>
+        <div class="feature">
+            <h2>Feature 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>$9.99/month</td>
+                    <td>Feature 1, Feature 2</td>
+                </tr>
+                <tr>
+                    <td>Pro</td>
+                    <td>$19.99/month</td>
+                    <td>Feature 1, Feature 2, Feature 3</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>$29.99/month</td>
+                    <td>Feature 1, Feature 2, Feature 3, Feature 4</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Limited Time Offer!</h1>
+        <p>Get 20% off your first purchase with code NEW20</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>
+                <p>Q: What is Product Name?</p>
+                <p>A: Product Name is a revolutionary new product that will change the way you live, work, and play.</p>
+            </li>
+            <li>
+                <p>Q: How does Product Name work?</p>
+                <p>A: Product Name uses advanced technology to make your life easier and more efficient.</p>
+            </li>
+            <li>
+                <p>Q: Is Product Name easy to use?</p>
+                <p>A: Yes, Product Name is designed to be user-friendly and intuitive.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2022 Product Name. All rights reserved.</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+    </footer>
+
+</body>
+</html>
