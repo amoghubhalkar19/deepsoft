@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Delish Delights - Food Delivery</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
+
+                 body {
+                     font-family: 'Montserrat', sans-serif;
+                     line-height: 1.6;
+                 }
+
+                 /* Header */
+                 header {
+                     background-color: #34495e;
+                     color: #fff;
+                     padding: 20px;
+                 }
+
+                 header nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
+
+                 header nav a {
+                     color: #fff;
+                     text-decoration: none;
+                     padding: 10px;
+                 }
+
+                 header nav a:hover {
+                     background-color: #5f6c80;
+                 }
+
+                 /* Hero */
+                 .hero {
+                     height: 100vh;
+                     background-image: url('https://source.unsplash.com/random/food,plate');
+                     background-size: cover;
+                     background-position: center;
+                 }
+
+                 .hero h1 {
+                     color: #fff;
+                     text-align: center;
+                     font-size: 4rem;
+                     margin-top: 50px;
+                 }
+
+                 .hero button {
+                     background-color: #4caf50;
+                     color: #fff;
+                     padding: 10px 20px;
+                     border: none;
+                     cursor: pointer;
+                 }
+
+                 .hero button:hover {
+                     background-color: #3e8e41;
+                 }
+
+                 /* Features */
+                 .features {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                     flex-wrap: wrap;
+                     padding: 50px;
+                 }
+
+                 .features div {
+                     width: 30%;
+                     text-align: center;
+                     margin-bottom: 50px;
+                 }
+
+                 .features div h2 {
+                     font-size: 2rem;
+                     margin-bottom: 20px;
+                 }
+
+                 .features div p {
+                     font-size: 1.2rem;
+                     line-height: 1.6;
+                 }
+
+                 /* Pricing */
+                 .pricing {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                     padding: 50px;
+                 }
+
+                 .pricing div {
+                     width: 30%;
+                     text-align: center;
+                     border: 1px solid #ccc;
+                     padding: 20px;
+                     border-radius: 5px;
+                 }
+
+                 .pricing div h2 {
+                     font-size: 2rem;
+                     margin-bottom: 20px;
+                 }
+
+                 .pricing div p {
+                     font-size: 1.2rem;
+                     line-height: 1.6;
+                 }
+
+                 /* Banner */
+                 .banner {
+                     background-color: #f4f4f4;
+                     padding: 50px;
+                     text-align: center;
+                 }
+
+                 /* FAQ */
+                 .faq {
+                     padding: 50px;
+                 }
+
+                 .faq h2 {
+                     font-size: 2rem;
+                     margin-bottom: 20px;
+                 }
+
+                 .faq p {
+                     font-size: 1.2rem;
+                     line-height: 1.6;
+                 }
+
+                 /* Footer */
+                 footer {
+                     background-color: #34495e;
+                     color: #fff;
+                     padding: 20px;
+                 }
+
+                 footer a {
+                     color: #fff;
+                     text-decoration: none;
+                     margin: 10px;
+                 }
+
+                 footer a:hover {
+                     text-decoration: underline;
+                 }
+
+                 footer i {
+                     color: #fff;
+                     margin-right: 10px;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <nav>
+                     <a href="#hero">Home</a>
+                     <a href="#features">Features</a>
+                     <a href="#pricing">Pricing</a>
+                     <a href="#faq">FAQ</a>
+                 </nav>
+             </header>
+             <section class="hero">
+                 <h1>Delish Delights - Food Delivery</h1>
+                 <button>Order Now</button>
+             </section>
+             <section id="features" class="features">
+                 <div>
+                     <h2>Fast Delivery</h2>
+                     <p>We deliver your food in 30 minutes or less.</p>
+                 </div>
+                 <div>
+                     <h2>Wide Selection</h2>
+                     <p>Choose from a variety of dishes and cuisines.</p>
+                 </div>
+                 <div>
+                     <h2>Easy Ordering</h2>
+                     <p>Place your order online or through our app.</p>
+                 </div>
+             </section>
+             <section id="pricing" class="pricing">
+                 <div>
+                     <h2>Basic</h2>
+                     <p>$10/month</p>
+                 </div>
+                 <div>
+                     <h2>Standard</h2>
+                     <p>$15/month</p>
+                 </div>
+                 <div>
+                     <h2>Premium</h2>
+                     <p>$20/month</p>
+                 </div>
+             </section>
+             <section class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Get 20% off your first order with code NEW20.</p>
+             </section>
+             <section id="faq" class="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <div>
+                     <h3>How long does delivery take?</h3>
+                     <p>We deliver your food in 30 minutes or less.</p>
+                 </div>
+                 <div>
+                     <h3>What payment methods do you accept?</h3>
+                     <p>We accept all major credit cards and PayPal.</p>
+                 </div>
+                 <div>
+                     <h3>Can I track my order?</h3>
+                     <p>Yes, you can track your order in real-time through our app or website.</p>
+                 </div>
+             </section>
+             <footer>
+                 <p>&copy; 2022 Delish Delights. All rights reserved.</p>
+                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+             </footer>
+         </body>
+         </html>
