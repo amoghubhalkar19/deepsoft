@@ -12,7 +12,7 @@
                  }
 
                  body {
-                     font-family: 'Roboto', sans-serif;
+                     font-family: Arial, sans-serif;
                      line-height: 1.6;
                  }
 
@@ -36,7 +36,7 @@
                  }
 
                  header nav a:hover {
-                     background-color: #5e5e5e;
+                     background-color: #5fbfdb;
                  }
 
                  /* Hero */
@@ -50,20 +50,21 @@
                      align-items: center;
                      text-align: center;
                      color: #fff;
-                     font-size: 2rem;
+                 }
+
+                 .hero h1 {
+                     font-size: 4rem;
+                     margin: 0;
                  }
 
                  .hero button {
                      background-color: #4CAF50;
+                     color: white;
+                     padding: 14px 20px;
+                     margin: 8px 0;
                      border: none;
-                     color: #fff;
-                     padding: 15px 32px;
-                     text-align: center;
-                     text-decoration: none;
-                     display: inline-block;
-                     font-size: 16px;
-                     margin: 4px 2px;
                      cursor: pointer;
+                     width: 200px;
                  }
 
                  /* Features */
@@ -80,18 +81,27 @@
                  .features ul {
                      display: flex;
                      justify-content: space-around;
-                     align-items: center;
+                     flex-wrap: wrap;
                  }
 
                  .features li {
                      width: 30%;
+                     margin-bottom: 30px;
                      text-align: center;
+                     background-color: #f9f9f9;
+                     padding: 20px;
+                     border: 1px solid #ddd;
+                     border-radius: 5px;
+                 }
+
+                 .features li:hover {
+                     background-color: #f1f1f1;
                  }
 
                  /* Pricing */
                  .pricing {
                      padding: 60px;
-                     background-color: #e9e9e9;
+                     background-color: #ddd;
                  }
 
                  .pricing h2 {
@@ -99,26 +109,30 @@
                      margin-bottom: 30px;
                  }
 
-                 .pricing table {
-                     width: 100%;
-                     border-collapse: collapse;
+                 .pricing ul {
+                     display: flex;
+                     justify-content: space-around;
+                     flex-wrap: wrap;
                  }
 
-                 .pricing th,
-                 .pricing td {
+                 .pricing li {
+                     width: 30%;
+                     background-color: #f9f9f9;
+                     padding: 20px;
                      border: 1px solid #ddd;
-                     padding: 8px;
-                     text-align: left;
+                     border-radius: 5px;
+                     text-align: center;
+                     margin-bottom: 30px;
                  }
 
-                 .pricing tr:nth-child(even) {
-                     background-color: #f2f2f2;
+                 .pricing li:hover {
+                     background-color: #f1f1f1;
                  }
 
                  /* Banner */
                  .banner {
                      height: 200px;
-                     background-color: #4CAF50;
+                     background-color: #3498db;
                      color: #fff;
                      display: flex;
                      justify-content: center;
@@ -146,13 +160,9 @@
                  }
 
                  .faq li:before {
-                     content: 'Q: ';
-                     color: #777;
+                     content: "\2014";
+                     color: #3498db;
                      margin-right: 10px;
-                 }
-
-                 .faq li p {
-                     margin: 0;
                  }
 
                  /* Footer */
@@ -160,20 +170,17 @@
                      background-color: #3498db;
                      color: #fff;
                      padding: 20px;
+                     text-align: center;
                  }
 
                  footer a {
                      color: #fff;
                      text-decoration: none;
-                     margin: 10px;
+                     margin: 0 5px;
                  }
 
                  footer a:hover {
-                     text-decoration: underline;
-                 }
-
-                 footer i {
-                     font-size: 1.5rem;
+                     color: #ccc;
                  }
              </style>
          </head>
@@ -186,82 +193,74 @@
                      <a href="#faq">FAQ</a>
                  </nav>
              </header>
-             <section class="hero">
+             <section class="hero" id="hero">
                  <h1>Welcome to MyBank</h1>
                  <button>Sign Up Now</button>
              </section>
-             <section class="features">
+             <section class="features" id="features">
                  <h2>Key Features</h2>
                  <ul>
+                     <li>Secure Online Banking</li>
+                     <li>Mobile Banking App</li>
+                     <li>24/7 Customer Support</li>
+                     <li>Free Check Deposit</li>
+                 </ul>
+             </section>
+             <section class="pricing" id="pricing">
+                 <h2>Pricing Plans</h2>
+                 <ul>
                      <li>
-                         <h3>Secure Transactions</h3>
-                         <p>Securely transfer funds to anyone, anywhere, anytime.</p>
+                         <h3>Basic</h3>
+                         <p>$9.99/month</p>
+                         <ul>
+                             <li>Unlimited Transactions</li>
+                             <li>Mobile Banking</li>
+                             <li>Online Statements</li>
+                         </ul>
                      </li>
                      <li>
-                         <h3>Mobile Banking</h3>
-                         <p>Manage your account on the go with our mobile app.</p>
-                     </li>
-                     <li>
-                         <h3>24/7 Customer Support</h3>
-                         <p>Get help whenever you need it with our dedicated support team.</p>
+                         <h3>Premium</h3>
+                         <p>$19.99/month</p>
+                         <ul>
+                             <li>Unlimited Transactions</li>
+                             <li>Mobile Banking</li>
+                             <li>Online Statements</li>
+                             <li>Free Check Deposit</li>
+                         </ul>
                      </li>
                  </ul>
              </section>
-             <section class="pricing">
-                 <h2>Pricing Plans</h2>
-                 <table>
-                     <thead>
-                         <tr>
-                             <th>Plan</th>
-                             <th>Monthly Fee</th>
-                             <th>Features</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>Basic</td>
-                             <td>$9.99</td>
-                             <td>Unlimited Transactions</td>
-                         </tr>
-                         <tr>
-                             <td>Standard</td>
-                             <td>$19.99</td>
-                             <td>Unlimited Transactions + Bill Pay</td>
-                         </tr>
-                         <tr>
-                             <td>Premium</td>
-                             <td>$29.99</td>
-                             <td>Unlimited Transactions + Bill Pay + Mobile Deposit</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </section>
              <section class="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Sign up for our Premium plan and get a free year of service.</p>
+                 <p>Limited Time Offer: Sign up for Premium and get a free bank account!</p>
              </section>
-             <section class="faq">
+             <section class="faq" id="faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <p>Q: How do I sign up for MyBank?</p>
-                         <p>A: Simply click the "Sign Up Now" button in the hero section and follow the on-screen instructions.</p>
+                         <details>
+                             <summary>How do I sign up for MyBank?</summary>
+                             <p>You can sign up for MyBank by clicking the "Sign Up Now" button on the homepage and following the on-screen instructions.</p>
+                         </details>
                      </li>
                      <li>
-                         <p>Q: Is MyBank secure?</p>
-                         <p>A: Yes, we use the latest encryption technology to ensure your information is safe and secure.</p>
+                         <details>
+                             <summary>Is MyBank secure?</summary>
+                             <p>Yes, MyBank uses the latest security protocols to ensure your information is protected.</p>
+                         </details>
                      </li>
                      <li>
-                         <p>Q: Can I access MyBank on my mobile device?</p>
-                         <p>A: Yes, you can download our mobile app from the App Store or Google Play to manage your account on the go.</p>
+                         <details>
+                             <summary>Can I access MyBank on my mobile device?</summary>
+                             <p>Yes, MyBank offers a mobile banking app for both iOS and Android devices.</p>
+                         </details>
                      </li>
                  </ul>
              </section>
              <footer>
                  <p>&copy; 2022 MyBank. All rights reserved.</p>
-                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#"><i class="fab fa-twitter"></i></a>
-                 <a href="#"><i class="fab fa-instagram"></i></a>
+                 <a href="#">Terms of Service</a>
+                 <a href="#">Privacy Policy</a>
+                 <a href="#">Contact Us</a>
              </footer>
          </body>
          </html>
