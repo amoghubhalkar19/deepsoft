@@ -3,7 +3,7 @@
          <head>
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>WatchCo - Modern Timepieces</title>
+             <title>Credit Card Company</title>
              <style>
                  * {
                      margin: 0;
@@ -18,7 +18,7 @@
 
                  /* Header */
                  header {
-                     background-color: #333;
+                     background-color: #3498db;
                      color: #fff;
                      padding: 20px;
                  }
@@ -36,13 +36,13 @@
                  }
 
                  header nav a:hover {
-                     background-color: #555;
+                     background-color: #5e5e5e;
                  }
 
                  /* Hero */
                  .hero {
                      height: 100vh;
-                     background-image: url('watch.jpg');
+                     background-image: url('card.jpg');
                      background-size: cover;
                      background-position: center;
                      display: flex;
@@ -54,82 +54,101 @@
                  }
 
                  .hero button {
-                     background-color: #fff;
-                     color: #333;
+                     background-color: #4CAF50;
                      border: none;
-                     padding: 10px 20px;
+                     color: #fff;
+                     padding: 15px 32px;
+                     text-align: center;
+                     text-decoration: none;
+                     display: inline-block;
+                     font-size: 16px;
+                     margin: 4px 2px;
                      cursor: pointer;
-                 }
-
-                 .hero button:hover {
-                     background-color: #ddd;
                  }
 
                  /* Features */
                  .features {
-                     padding: 50px;
+                     background-color: #f1f1f1;
+                     padding: 60px;
+                 }
+
+                 .features h2 {
+                     text-align: center;
+                 }
+
+                 .features ul {
                      display: flex;
                      justify-content: space-around;
                      flex-wrap: wrap;
                  }
 
-                 .feature {
+                 .features li {
                      width: 30%;
-                     margin-bottom: 50px;
+                     margin-bottom: 30px;
                      text-align: center;
-                     background-color: #f2f2f2;
+                     background-color: #f9f9f9;
                      padding: 20px;
-                     border-radius: 5px;
-                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                     border: 1px solid #ddd;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                  }
 
-                 .feature h2 {
+                 .features li h3 {
                      margin: 0;
                  }
 
-                 .feature p {
-                     margin: 10px 0;
+                 .features li p {
+                     margin: 0;
                  }
 
                  /* Pricing */
                  .pricing {
-                     padding: 50px;
+                     background-color: #f1f1f1;
+                     padding: 60px;
+                 }
+
+                 .pricing h2 {
+                     text-align: center;
+                 }
+
+                 .pricing ul {
                      display: flex;
                      justify-content: space-around;
+                     flex-wrap: wrap;
                  }
 
-                 .pricing-plan {
+                 .pricing li {
                      width: 30%;
-                     text-align: center;
-                     background-color: #f2f2f2;
+                     background-color: #fff;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                     margin-bottom: 30px;
                      padding: 20px;
-                     border-radius: 5px;
-                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                     text-align: center;
                  }
 
-                 .pricing-plan h2 {
+                 .pricing li h3 {
                      margin: 0;
                  }
 
-                 .pricing-plan p {
-                     margin: 10px 0;
+                 .pricing li p {
+                     margin: 0;
                  }
 
                  /* Banner */
                  .banner {
-                     height: 200px;
-                     background-color: #f5f5f5;
+                     background-color: #4CAF50;
+                     color: #fff;
+                     padding: 20px;
                      text-align: center;
-                     line-height: 200px;
                  }
 
                  /* FAQ */
                  .faq {
-                     padding: 50px;
+                     background-color: #f1f1f1;
+                     padding: 60px;
                  }
 
                  .faq h2 {
-                     margin: 0;
+                     text-align: center;
                  }
 
                  .faq ul {
@@ -142,33 +161,36 @@
                  }
 
                  .faq li:before {
-                     content: 'Q: ';
-                     display: inline-block;
-                     width: 20px;
-                     text-align: right;
+                     content: "\2014";
+                     color: #aaa;
                      margin-right: 10px;
+                 }
+
+                 .faq li p {
+                     margin: 0;
                  }
 
                  /* Footer */
                  footer {
-                     background-color: #333;
+                     background-color: #3498db;
                      color: #fff;
                      padding: 20px;
+                     text-align: center;
                  }
 
                  footer a {
                      color: #fff;
                      text-decoration: none;
-                     margin: 10px;
+                     margin: 0 10px;
                  }
 
                  footer a:hover {
-                     text-decoration: underline;
+                     color: #ccc;
                  }
 
                  footer i {
-                     font-size: 1.5rem;
-                     margin-right: 10px;
+                     color: #fff;
+                     margin: 0 5px;
                  }
              </style>
          </head>
@@ -181,66 +203,72 @@
                      <a href="#faq">FAQ</a>
                  </nav>
              </header>
-             <section class="hero">
-                 <h1>Discover Our Modern Timepieces</h1>
-                 <button>Shop Now</button>
+             <section id="hero" class="hero">
+                 <h1>Welcome to Our Credit Card Company</h1>
+                 <button>Apply Now</button>
              </section>
-             <section class="features">
-                 <div class="feature">
-                     <h2>Sleek Design</h2>
-                     <p>Our watches boast a minimalist yet modern design that complements any outfit.</p>
-                 </div>
-                 <div class="feature">
-                     <h2>Durable Materials</h2>
-                     <p>We use only the highest quality materials to ensure our watches last a lifetime.</p>
-                 </div>
-                 <div class="feature">
-                     <h2>Customizable</h2>
-                     <p>Choose from a variety of strap colors and face designs to make your watch truly unique.</p>
-                 </div>
+             <section id="features" class="features">
+                 <h2>Key Features</h2>
+                 <ul>
+                     <li>
+                         <h3>Rewards Program</h3>
+                         <p>Earn points for every purchase</p>
+                     </li>
+                     <li>
+                         <h3>Low Interest Rates</h3>
+                         <p>Competitive interest rates</p>
+                     </li>
+                     <li>
+                         <h3>Secure Transactions</h3>
+                         <p>Protected by advanced encryption</p>
+                     </li>
+                 </ul>
              </section>
-             <section class="pricing">
-                 <div class="pricing-plan">
-                     <h2>Classic</h2>
-                     <p>$99</p>
-                     <p>Includes basic features and a classic leather strap.</p>
-                 </div>
-                 <div class="pricing-plan">
-                     <h2>Premium</h2>
-                     <p>$199</p>
-                     <p>Includes advanced features and a premium metal band.</p>
-                 </div>
-                 <div class="pricing-plan">
-                     <h2>Elite</h2>
-                     <p>$299</p>
-                     <p>Includes all features and a luxurious sapphire crystal face.</p>
-                 </div>
+             <section id="pricing" class="pricing">
+                 <h2>Pricing Plans</h2>
+                 <ul>
+                     <li>
+                         <h3>Basic</h3>
+                         <p>$0/month</p>
+                     </li>
+                     <li>
+                         <h3>Standard</h3>
+                         <p>$10/month</p>
+                     </li>
+                     <li>
+                         <h3>Premium</h3>
+                         <p>$20/month</p>
+                     </li>
+                 </ul>
              </section>
-             <section class="banner">
-                 <p>Limited Time Offer: Get 10% off your first purchase with code WELCOME10</p>
+             <section id="banner" class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Sign up now and get a 10% discount on your first purchase</p>
              </section>
-             <section class="faq">
+             <section id="faq" class="faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <p>Q: What materials are your watches made of?</p>
-                         <p>A: Our watches are made of high-quality stainless steel and scratch-resistant glass.</p>
+                         <h3>How do I apply for a credit card?</h3>
+                         <p>You can apply online or visit one of our branches</p>
                      </li>
                      <li>
-                         <p>Q: Are your watches waterproof?</p>
-                         <p>A: Yes, all of our watches are water-resistant up to 50 meters.</p>
+                         <h3>What is the interest rate for the credit card?</h3>
+                         <p>Interest rates vary depending on the plan</p>
                      </li>
                      <li>
-                         <p>Q: How long does shipping take?</p>
-                         <p>A: Orders typically ship within 2-3 business days and arrive within 5-7 days.</p>
+                         <h3>Is there a rewards program for the credit card?</h3>
+                         <p>Yes, you can earn points for every purchase</p>
                      </li>
                  </ul>
              </section>
              <footer>
-                 <p>&copy; 2022 WatchCo. All rights reserved.</p>
-                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#"><i class="fab fa-twitter"></i></a>
-                 <a href="#"><i class="fab fa-instagram"></i></a>
+                 <p>&copy; 2022 Credit Card Company. All rights reserved.</p>
+                 <a href="#">Terms of Service</a>
+                 <a href="#">Privacy Policy</a>
+                 <i class="fab fa-facebook-f"></i>
+                 <i class="fab fa-twitter"></i>
+                 <i class="fab fa-instagram"></i>
              </footer>
          </body>
          </html>
