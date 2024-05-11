@@ -115,3 +115,40 @@ def write_to_file(code):
     file_path = os.path.join("public", "index.html")
     with open(file_path, "w") as file:
         file.write(code)
+
+#funciton to perform modifications:
+
+def perform_modifications(input_text, code):
+
+    prompt=PromptTemplate(
+        input_variables=["text", "code"],
+        template='''Task: {text}
+                    code:{code}
+
+           Task: Modify the existing product website to incorporate specific changes based on user input.
+            Objective:
+            You are tasked with making modifications to an existing product website to enhance its design and functionality. The website showcases a fictional product and currently consists of several sections including Header, Hero, Features, Pricing, Banner, FAQ, and Footer. Your goal is to update the website according to the provided input text while adhering to modern design principles and coding techniques.
+
+            Instructions:
+            1. Read the existing website code and understand its structure and content.
+            2. Review the provided input text carefully, which outlines the desired changes to be made to the website.
+            3. Implement modifications to each section of the website as specified in the input text.
+            4. Ensure that the modified website remains visually appealing, user-friendly, and fully functional.
+            5. Use semantic HTML elements, inline CSS styling, and JavaScript interactivity to enhance the website's design and functionality.
+            6. Utilize modern coding techniques such as flexbox or grid layout, CSS variables, and third-party libraries/frameworks (if necessary) to optimize the website's performance and responsiveness.
+            7. Verify the correctness of the modifications and ensure that the website meets the specified requirements.
+
+            Deliverables:
+            Submit the modified HTML, css and javascript code for the product website in a single page, incorporating the requested changes based on the provided input text. The modified website should reflect the desired improvements and adhere to the best practices of web development.
+
+        '''
+    )
+
+    chain=LLMChain(llm=HuggingFaceHub(repo_id='mistralai/Mistral-7B-Instruct-v0.2', model_kwargs={'temperature':0.1, 'max_new_tokens':8000}, huggingfacehub_api_token="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"), prompt=prompt)
+    code=chain.invoke(input_text, code)
+    doctype_index = code['text'].find("<!DOCTYPE html>")
+    doctype_index_last=code['text'].find("</html>")
+    final_code=code['text'][doctype_index:doctype_index_last+7]
+
+    return final_code
+
