@@ -25,12 +25,12 @@ def main():
             st.write("Here's your website:")
             comps.iframe(website_url, height=500, scrolling=True)
 
-            if st.button("Modifications"):
-                # Update session state to navigate to the modifications page
-                st.session_state.page = 'modifications'
+            # if st.button("Modifications"):
+            #     # Update session state to navigate to the modifications page
+            #     st.session_state.page = 'modifications'
 
-            # Update session state to navigate back to the home page
-            st.session_state.page = 'home'
+            # # Update session state to navigate back to the home page
+            # st.session_state.page = 'home'
 
 if __name__ == "__main__":
     main()
