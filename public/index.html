@@ -1,344 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshBasket - Your Online Grocery Store</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>MyBank - Your Digital Banking Partner</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
+                 body {
+                     font-family: 'Roboto', sans-serif;
+                     line-height: 1.6;
+                 }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+                 /* Header */
+                 header {
+                     background-color: #3498db;
+                     color: #fff;
+                     padding: 20px;
+                 }
 
-        ul {
-            list-style: none;
-        }
+                 header nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
 
-        .container {
-            max-width: 1140px;
-            margin: auto;
-            padding: 0 20px;
-        }
+                 header nav a {
+                     color: #fff;
+                     text-decoration: none;
+                     padding: 10px;
+                 }
 
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
+                 header nav a:hover {
+                     background-color: #5e5e5e;
+                 }
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+                 /* Hero */
+                 .hero {
+                     height: 100vh;
+                     background-image: url('bank.jpg');
+                     background-size: cover;
+                     background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
+                     font-size: 2rem;
+                 }
 
-        .header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+                 .hero button {
+                     background-color: #4CAF50;
+                     border: none;
+                     color: #fff;
+                     padding: 15px 32px;
+                     text-align: center;
+                     text-decoration: none;
+                     display: inline-block;
+                     font-size: 16px;
+                     margin: 4px 2px;
+                     cursor: pointer;
+                 }
 
-        .header nav a {
-            color: #fff;
-            padding: 10px;
-        }
+                 /* Features */
+                 .features {
+                     padding: 60px;
+                     background-color: #f1f1f1;
+                 }
 
-        .header nav a:hover {
-            background-color: #555;
-        }
+                 .features h2 {
+                     text-align: center;
+                     margin-bottom: 30px;
+                 }
 
-        .hero {
-            height: 500px;
-            background-image: url('https://source.unsplash.com/random/food,grocery,vegetables,fruit');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            font-size: 32px;
-        }
+                 .features ul {
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                 }
 
-        .hero button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 200px;
-        }
+                 .features li {
+                     width: 30%;
+                     text-align: center;
+                 }
 
-        .hero button:hover {
-            opacity: 0.8;
-        }
+                 /* Pricing */
+                 .pricing {
+                     padding: 60px;
+                     background-color: #e9e9e9;
+                 }
 
-        .features {
-            background-color: #f1f1f1;
-            padding: 80px 0;
-        }
+                 .pricing h2 {
+                     text-align: center;
+                     margin-bottom: 30px;
+                 }
 
-        .features h2 {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+                 .pricing table {
+                     width: 100%;
+                     border-collapse: collapse;
+                 }
 
-        .features ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+                 .pricing th,
+                 .pricing td {
+                     border: 1px solid #ddd;
+                     padding: 8px;
+                     text-align: left;
+                 }
 
-        .features li {
-            width: 30%;
-            text-align: center;
-            margin-bottom: 50px;
-        }
+                 .pricing tr:nth-child(even) {
+                     background-color: #f2f2f2;
+                 }
 
-        .features li:nth-child(even) {
-            text-align: left;
-        }
+                 /* Banner */
+                 .banner {
+                     height: 200px;
+                     background-color: #4CAF50;
+                     color: #fff;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                 }
 
-        .features li img {
-            width: 100%;
-            height: auto;
-        }
+                 /* FAQ */
+                 .faq {
+                     padding: 60px;
+                 }
 
-        .pricing {
-            background-color: #333;
-            color: #fff;
-            padding: 80px 0;
-        }
+                 .faq h2 {
+                     text-align: center;
+                     margin-bottom: 30px;
+                 }
 
-        .pricing h2 {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+                 .faq ul {
+                     list-style-type: none;
+                     padding: 0;
+                 }
 
-        .pricing ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style: none;
-        }
+                 .faq li {
+                     margin-bottom: 20px;
+                 }
 
-        .pricing li {
-            width: 30%;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 50px;
-            border: 1px solid #ddd;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
+                 .faq li:before {
+                     content: 'Q: ';
+                     color: #777;
+                     margin-right: 10px;
+                 }
 
-        .pricing li h3 {
-            margin: 0;
-            font-size: 24px;
-        }
+                 .faq li p {
+                     margin: 0;
+                 }
 
-        .pricing li p {
-            margin: 0;
-            font-size: 16px;
-            line-height: 1.6;
-        }
+                 /* Footer */
+                 footer {
+                     background-color: #3498db;
+                     color: #fff;
+                     padding: 20px;
+                 }
 
-        .banner {
-            background-color: #333;
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
+                 footer a {
+                     color: #fff;
+                     text-decoration: none;
+                     margin: 10px;
+                 }
 
-        .faq {
-            background-color: #f1f1f1;
-            padding: 80px 0;
-        }
+                 footer a:hover {
+                     text-decoration: underline;
+                 }
 
-        .faq h2 {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .faq ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .faq li {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-
-        .faq li:last-child {
-            border-bottom: none;
-        }
-
-        .faq li:hover {
-            background-color: #f5f5f5;
-        }
-
-        .faq li:before {
-            content: '\f0d7';
-            font-size: 24px;
-            margin-right: 10px;
-            color: #333;
-        }
-
-        .faq li:last-child:before {
-            content: none;
-        }
-
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer a:hover {
-            color: #ccc;
-        }
-
-        .footer i {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .features li {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="header">
-        <h1>FreshBasket</h1>
-        <nav>
-            <a href="#hero">Home</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="hero">
-        <h1>Shop Fresh Groceries Online</h1>
-        <button>Get Started</button>
-    </section>
-
-    <section class="features" id="features">
-        <h2>Why Choose FreshBasket?</h2>
-        <ul>
-            <li>
-                <img src="https://source.unsplash.com/random/vegetables,fruit" alt="Fresh Produce">
-                <h3>Fresh Produce</h3>
-                <p>We source the freshest fruits and vegetables from local farms and trusted suppliers.</p>
-            </li>
-            <li>
-                <img src="https://source.unsplash.com/random/grocery,store,shopping" alt="Convenient Shopping">
-                <h3>Convenient Shopping</h3>
-                <p>Shop from the comfort of your home and have your groceries delivered right to your doorstep.</p>
-            </li>
-            <li>
-                <img src="https://source.unsplash.com/random/discount,sale,offer" alt="Special Offers">
-                <h3>Special Offers</h3>
-                <p>Take advantage of our exclusive deals and discounts on select items.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <h2>Our Pricing Plans</h2>
-        <ul>
-            <li>
-                <h3>Basic</h3>
-                <p>$19.99/month</p>
-                <p>10% off on all orders</p>
-            </li>
-            <li>
-                <h3>Standard</h3>
-                <p>$29.99/month</p>
-                <p>15% off on all orders</p>
-            </li>
-            <li>
-                <h3>Premium</h3>
-                <p>$39.99/month</p>
-                <p>20% off on all orders</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="banner">
-        <h2>Limited Time Offer!</h2>
-        <p>Sign up for our Premium plan now and get a free delivery on your first order.</p>
-        <button>Sign Up</button>
-    </section>
-
-    <section class="faq" id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <ul>
-            <li>
-                <i class="fas fa-question"></i>
-                <details>
-                    <summary>How does FreshBasket work?</summary>
-                    <p>You can browse our extensive catalog of fresh produce, pantry staples, and household items. Once you've added items to your cart, proceed to checkout and choose your preferred delivery time. We'll handle the rest!</p>
-                </details>
-            </li>
-            <li>
-                <i class="fas fa-truck"></i>
-                <details>
-                    <summary>What are your delivery hours?</summary>
-                    <p>We offer delivery from Monday to Sunday, 9 AM to 9 PM.</p>
-                </details>
-            </li>
-            <li>
-                <i class="fas fa-money-bill-alt"></i>
-                <details>
-                    <summary>Do you offer discounts or coupons?</summary>
-                    <p>Yes, we frequently offer discounts and coupons on select items. Sign up for our newsletter to stay informed.</p>
-                </details>
-            </li>
-        </ul>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2022 FreshBasket. All rights reserved.</p>
-        <ul>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Follow Us</a></li>
-        </ul>
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
-</html>
+                 footer i {
+                     font-size: 1.5rem;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <nav>
+                     <a href="#hero">Home</a>
+                     <a href="#features">Features</a>
+                     <a href="#pricing">Pricing</a>
+                     <a href="#faq">FAQ</a>
+                 </nav>
+             </header>
+             <section class="hero">
+                 <h1>Welcome to MyBank</h1>
+                 <button>Sign Up Now</button>
+             </section>
+             <section class="features">
+                 <h2>Key Features</h2>
+                 <ul>
+                     <li>
+                         <h3>Secure Transactions</h3>
+                         <p>Securely transfer funds to anyone, anywhere, anytime.</p>
+                     </li>
+                     <li>
+                         <h3>Mobile Banking</h3>
+                         <p>Manage your account on the go with our mobile app.</p>
+                     </li>
+                     <li>
+                         <h3>24/7 Customer Support</h3>
+                         <p>Get help whenever you need it with our dedicated support team.</p>
+                     </li>
+                 </ul>
+             </section>
+             <section class="pricing">
+                 <h2>Pricing Plans</h2>
+                 <table>
+                     <thead>
+                         <tr>
+                             <th>Plan</th>
+                             <th>Monthly Fee</th>
+                             <th>Features</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Basic</td>
+                             <td>$9.99</td>
+                             <td>Unlimited Transactions</td>
+                         </tr>
+                         <tr>
+                             <td>Standard</td>
+                             <td>$19.99</td>
+                             <td>Unlimited Transactions + Bill Pay</td>
+                         </tr>
+                         <tr>
+                             <td>Premium</td>
+                             <td>$29.99</td>
+                             <td>Unlimited Transactions + Bill Pay + Mobile Deposit</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </section>
+             <section class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Sign up for our Premium plan and get a free year of service.</p>
+             </section>
+             <section class="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <ul>
+                     <li>
+                         <p>Q: How do I sign up for MyBank?</p>
+                         <p>A: Simply click the "Sign Up Now" button in the hero section and follow the on-screen instructions.</p>
+                     </li>
+                     <li>
+                         <p>Q: Is MyBank secure?</p>
+                         <p>A: Yes, we use the latest encryption technology to ensure your information is safe and secure.</p>
+                     </li>
+                     <li>
+                         <p>Q: Can I access MyBank on my mobile device?</p>
+                         <p>A: Yes, you can download our mobile app from the App Store or Google Play to manage your account on the go.</p>
+                     </li>
+                 </ul>
+             </section>
+             <footer>
+                 <p>&copy; 2022 MyBank. All rights reserved.</p>
+                 <a href="#"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+             </footer>
+         </body>
+         </html>
