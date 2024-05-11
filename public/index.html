@@ -3,7 +3,7 @@
          <head>
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>DelishBites - Satisfy Your Cravings</title>
+             <title>Credit Card Company</title>
              <style>
                  * {
                      margin: 0;
@@ -12,7 +12,7 @@
                  }
 
                  body {
-                     font-family: 'Montserrat', sans-serif;
+                     font-family: 'Roboto', sans-serif;
                      line-height: 1.6;
                  }
 
@@ -28,11 +28,11 @@
                  .container {
                      max-width: 1100px;
                      margin: auto;
-                     padding: 0 20px;
+                     padding: 20px;
                  }
 
                  header {
-                     background-color: #f4f4f4;
+                     background-color: #f1c40f;
                      padding: 20px;
                  }
 
@@ -43,7 +43,7 @@
                  }
 
                  nav a {
-                     color: #333;
+                     color: #fff;
                      padding: 10px;
                  }
 
@@ -52,8 +52,8 @@
                  }
 
                  .hero {
-                     height: 500px;
-                     background-image: url('https://source.unsplash.com/random/food,plate');
+                     height: 50vh;
+                     background-image: url('card.jpg');
                      background-size: cover;
                      background-position: center;
                      display: flex;
@@ -64,223 +64,188 @@
                      font-size: 2rem;
                  }
 
-                 .hero h1 {
-                     margin: 0;
+                 .hero button {
+                     background-color: #fff;
+                     color: #f1c40f;
+                     border: none;
+                     padding: 10px 20px;
+                     cursor: pointer;
                  }
 
                  .features {
-                     background-color: #f5f5f5;
-                     padding: 100px 0;
-                 }
-
-                 .features h2 {
-                     text-align: center;
-                     margin-bottom: 50px;
-                 }
-
-                 .features ul {
                      display: flex;
                      justify-content: space-around;
+                     align-items: center;
                      flex-wrap: wrap;
                  }
 
-                 .features li {
+                 .feature {
                      width: 30%;
-                     margin-bottom: 50px;
+                     margin-bottom: 20px;
                      text-align: center;
+                     background-color: #f4f4f4;
+                     padding: 20px;
+                     border-radius: 5px;
+                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                  }
 
-                 .features li:nth-child(even) {
-                     text-align: left;
+                 .feature h2 {
+                     margin: 0;
+                 }
+
+                 .feature p {
+                     margin: 0;
                  }
 
                  .pricing {
-                     background-color: #e5e5e5;
-                     padding: 100px 0;
-                 }
-
-                 .pricing h2 {
-                     text-align: center;
-                     margin-bottom: 50px;
-                 }
-
-                 .pricing ul {
                      display: flex;
                      justify-content: space-around;
+                     align-items: center;
+                     flex-wrap: wrap;
                  }
 
-                 .pricing li {
+                 .pricing-card {
                      width: 30%;
                      text-align: center;
-                     padding: 50px;
                      background-color: #f4f4f4;
-                     border: 1px solid #ddd;
-                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                     padding: 20px;
+                     border-radius: 5px;
+                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                     margin-bottom: 20px;
                  }
 
-                 .pricing li:hover {
-                     background-color: #ddd;
+                 .pricing-card h2 {
+                     margin: 0;
                  }
 
-                 .pricing li p {
+                 .pricing-card p {
                      margin: 0;
                  }
 
                  .banner {
-                     height: 200px;
-                     background-color: #f4f4f4;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
+                     background-color: #f1c40f;
+                     padding: 20px;
                      text-align: center;
-                 }
-
-                 .banner h2 {
-                     margin: 0;
+                     color: #fff;
                  }
 
                  .faq {
-                     background-color: #f5f5f5;
-                     padding: 100px 0;
+                     background-color: #f4f4f4;
+                     padding: 20px;
                  }
 
                  .faq h2 {
-                     text-align: center;
-                     margin-bottom: 50px;
+                     margin: 0;
                  }
 
                  .faq ul {
-                     list-style: none;
                      padding: 0;
+                     list-style: none;
                  }
 
                  .faq li {
-                     background-color: #f4f4f4;
-                     padding: 20px;
-                     border-bottom: 1px solid #ddd;
-                     cursor: pointer;
+                     margin-bottom: 10px;
                  }
 
-                 .faq li:last-child {
-                     border-bottom: none;
-                 }
-
-                 .faq li:hover {
-                     background-color: #ddd;
-                 }
-
-                 .faq li:before {
-                     content: "\f0d7";
-                     font-size: 20px;
-                     margin-right: 10px;
-                     color: #333;
-                 }
-
-                 .faq li:last-child:before {
-                     content: "";
+                 .faq li p {
+                     margin: 0;
                  }
 
                  footer {
                      background-color: #333;
                      color: #fff;
                      padding: 20px;
+                     text-align: center;
                  }
 
                  footer a {
                      color: #fff;
                      text-decoration: none;
-                     margin: 10px;
+                     margin: 0 5px;
                  }
 
                  footer a:hover {
-                     text-decoration: underline;
-                 }
-
-                 footer i {
-                     font-size: 20px;
-                     margin-right: 10px;
+                     color: #ccc;
                  }
              </style>
          </head>
          <body>
              <header>
                  <nav>
-                     <a href="#hero">Home</a>
-                     <a href="#features">Features</a>
-                     <a href="#pricing">Pricing</a>
-                     <a href="#faq">FAQ</a>
+                     <ul>
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#">Features</a></li>
+                         <li><a href="#">Pricing</a></li>
+                         <li><a href="#">FAQ</a></li>
+                         <li><a href="#">Contact</a></li>
+                     </ul>
                  </nav>
              </header>
-             <section id="hero" class="hero">
-                 <h1>Welcome to DelishBites!</h1>
-                 <button>Order Now</button>
-             </section>
-             <section id="features" class="features">
-                 <h2>Key Features</h2>
-                 <ul>
-                     <li>
-                         <h3>Delicious Food</h3>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                     <li>
-                         <h3>Fast Delivery</h3>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                     <li>
-                         <h3>Affordable Prices</h3>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                 </ul>
-             </section>
-             <section id="pricing" class="pricing">
-                 <h2>Pricing Plans</h2>
-                 <ul>
-                     <li>
-                         <h3>Starter</h3>
-                         <p>$10/month</p>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                     <li>
-                         <h3>Pro</h3>
-                         <p>$20/month</p>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                     <li>
-                         <h3>Premium</h3>
-                         <p>$30/month</p>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                     </li>
-                 </ul>
-             </section>
-             <section id="banner" class="banner">
+             <div class="container hero">
+                 <h1>Welcome to C Credit Card Company</h1>
+                 <button>Apply Now</button>
+             </div>
+             <div class="container features">
+                 <div class="feature">
+                     <h2>Feature 1</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>Feature 2</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>Feature 3</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                 </div>
+             </div>
+             <div class="container pricing">
+                 <div class="pricing-card">
+                     <h2>Basic</h2>
+                     <p>$9.99/month</p>
+                 </div>
+                 <div class="pricing-card">
+                     <h2>Standard</h2>
+                     <p>$19.99/month</p>
+                 </div>
+                 <div class="pricing-card">
+                     <h2>Premium</h2>
+                     <p>$29.99/month</p>
+                 </div>
+             </div>
+             <div class="container banner">
                  <h2>Limited Time Offer!</h2>
-                 <p>Get 20% off your first order with code <strong>DELISH20</strong></p>
-             </section>
-             <section id="faq" class="faq">
+                 <p>Sign up for our Premium plan and get a free gift card worth $50.</p>
+             </div>
+             <div class="container faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <i class="fas fa-question"></i>
-                         <button>How long does delivery take?</button>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                         <h3>What is a credit card?</h3>
+                         <p>A credit card is a payment card issued to users as a means to borrow money before buying goods and services, based on the holder's promise to pay for them.</p>
                      </li>
                      <li>
-                         <i class="fas fa-question"></i>
-                         <button>What payment methods do you accept?</button>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                         <h3>How does a credit card work?</h3>
+                         <p>When you make a purchase with a credit card, the merchant receives payment from the credit card company, and you are then responsible for paying back the credit card company.</p>
                      </li>
                      <li>
-                         <i class="fas fa-question"></i>
-                         <button>Can I cancel my order?</button>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                         <h3>What are the benefits of using a credit card?</h3>
+                         <p>Credit cards offer convenience, rewards programs, and the ability to build credit history.</p>
                      </li>
                  </ul>
-             </section>
+             </div>
              <footer>
-                 <p>&copy; 2022 DelishBites. All rights reserved.</p>
-                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                 <p>&copy; 2022 C Credit Card Company. All rights reserved.</p>
+                 <ul>
+                     <li><a href="#">Terms of Service</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                 </ul>
+                 <ul>
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                 </ul>
              </footer>
          </body>
          </html>
