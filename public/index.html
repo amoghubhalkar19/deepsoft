@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Credit Card Company - Platinum Card</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
+
+                 body {
+                     font-family: 'Roboto', sans-serif;
+                     line-height: 1.6;
+                 }
+
+                 a {
+                     text-decoration: none;
+                     color: #333;
+                 }
+
+                 ul {
+                     list-style: none;
+                 }
+
+                 .container {
+                     max-width: 1100px;
+                     margin: auto;
+                     padding: 20px;
+                 }
+
+                 header {
+                     background-color: #f2f2f2;
+                     padding: 20px;
+                 }
+
+                 nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
+
+                 nav a {
+                     color: #333;
+                     padding: 10px;
+                 }
+
+                 nav a:hover {
+                     background-color: #e5e5e5;
+                 }
+
+                 .hero {
+                     height: 50vh;
+                     background-image: url('platinum-card.jpg');
+                     background-size: cover;
+                     background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
+                     font-size: 3rem;
+                 }
+
+                 .hero button {
+                     background-color: #4CAF50;
+                     color: white;
+                     padding: 14px 20px;
+                     margin: 8px 0;
+                     border: none;
+                     cursor: pointer;
+                     width: 200px;
+                 }
+
+                 .hero button:hover {
+                     opacity: 0.8;
+                 }
+
+                 .features {
+                     background-color: #f1f1f1;
+                     padding: 60px 0;
+                 }
+
+                 .features h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
+
+                 .features ul {
+                     display: flex;
+                     justify-content: space-around;
+                 }
+
+                 .features li {
+                     width: 30%;
+                     text-align: center;
+                     padding: 20px;
+                     background-color: #f9f9f9;
+                     border: 1px solid #ddd;
+                     margin-bottom: 20px;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                 }
+
+                 .features li h3 {
+                     margin-top: 0;
+                 }
+
+                 .pricing {
+                     background-color: #3498db;
+                     padding: 60px 0;
+                     color: #fff;
+                 }
+
+                 .pricing h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
+
+                 .pricing ul {
+                     display: flex;
+                     justify-content: space-around;
+                 }
+
+                 .pricing li {
+                     width: 30%;
+                     text-align: center;
+                     padding: 20px;
+                     background-color: rgba(255, 255, 255, 0.2);
+                     border: 1px solid #ddd;
+                     margin-bottom: 20px;
+                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                     transition: all 0.3s ease;
+                 }
+
+                 .pricing li:hover {
+                     background-color: rgba(255, 255, 255, 0.5);
+                 }
+
+                 .pricing li p {
+                     margin: 10px 0;
+                 }
+
+                 .faq {
+                     background-color: #f1f1f1;
+                     padding: 60px 0;
+                 }
+
+                 .faq h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
+
+                 .faq ul {
+                     list-style: none;
+                 }
+
+                 .faq li {
+                     padding: 20px;
+                     border-bottom: 1px solid #ddd;
+                     cursor: pointer;
+                 }
+
+                 .faq li:last-child {
+                     border-bottom: none;
+                 }
+
+                 .faq li:hover {
+                     background-color: #f9f9f9;
+                 }
+
+                 .faq li:before {
+                     content: '\f0d7';
+                     font-size: 24px;
+                     margin-right: 10px;
+                     color: #333;
+                 }
+
+                 .faq li:last-child:before {
+                     content: none;
+                 }
+
+                 footer {
+                     background-color: #333;
+                     color: #fff;
+                     padding: 20px;
+                 }
+
+                 footer a {
+                     color: #fff;
+                     text-decoration: none;
+                     margin: 0 10px;
+                 }
+
+                 footer a:hover {
+                     color: #ccc;
+                 }
+
+                 footer i {
+                     font-size: 1.5rem;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <nav>
+                     <a href="#hero">Home</a>
+                     <a href="#features">Features</a>
+                     <a href="#pricing">Pricing</a>
+                     <a href="#faq">FAQ</a>
+                 </nav>
+             </header>
+             <section id="hero" class="hero">
+                 <h1>Welcome to Platinum Card</h1>
+                 <button>Apply Now</button>
+             </section>
+             <section id="features" class="features">
+                 <h2>Key Features</h2>
+                 <ul>
+                     <li>
+                         <h3>Rewards Program</h3>
+                         <p>Earn points for every purchase</p>
+                     </li>
+                     <li>
+                         <h3>Travel Perks</h3>
+                         <p>Discounts on flights, hotels, and car rentals</p>
+                     </li>
+                     <li>
+                         <h3>24/7 Customer Support</h3>
+                         <p>Available whenever you need assistance</p>
+                     </li>
+                 </ul>
+             </section>
+             <section id="pricing" class="pricing">
+                 <h2>Pricing Plans</h2>
+                 <ul>
+                     <li>
+                         <h3>Basic</h3>
+                         <p>$9.99/month</p>
+                     </li>
+                     <li>
+                         <h3>Standard</h3>
+                         <p>$19.99/month</p>
+                     </li>
+                     <li>
+                         <h3>Premium</h3>
+                         <p>$29.99/month</p>
+                     </li>
+                 </ul>
+             </section>
+             <section id="faq" class="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <ul>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <p>What is the Platinum Card?</p>
+                         <p>The Platinum Card is a credit card offering various benefits such as rewards points, travel perks, and 24/7 customer support.</p>
+                     </li>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <p>How do I apply for the Platinum Card?</p>
+                         <p>You can apply for the Platinum Card by clicking the "Apply Now" button on the homepage.</p>
+                     </li>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <p>What are the benefits of the Platinum Card?</p>
+                         <p>The Platinum Card offers a rewards program, travel perks, and 24/7 customer support.</p>
+                     </li>
+                 </ul>
+             </section>
+             <footer>
+                 <p>&copy; 2022 Credit Card Company. All rights reserved.</p>
+                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+             </footer>
+         </body>
+         </html>
