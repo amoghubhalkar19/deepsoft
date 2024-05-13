@@ -123,9 +123,9 @@ def write_to_file(code):
 def perform_modifications(input_text, code):
 
     prompt=PromptTemplate(
-        input_variables=["text", "code"],
+        input_variables=["text", "input_code"],
         template='''Task: {text}
-                    code:{code}
+                    code:{input_code}
 
            Task: Modify the existing product website to incorporate specific changes based on user input.
             Objective:
@@ -147,10 +147,10 @@ def perform_modifications(input_text, code):
     )
 
     chain=LLMChain(llm=HuggingFaceHub(repo_id='mistralai/Mistral-7B-Instruct-v0.2', model_kwargs={'temperature':0.1, 'max_new_tokens':8000}, huggingfacehub_api_token="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"), prompt=prompt)
-    code=chain.invoke(input_text, code)
-    doctype_index = code['text'].find("<!DOCTYPE html>")
-    doctype_index_last=code['text'].find("</html>")
-    final_code=code['text'][doctype_index:doctype_index_last+7]
+    modified_code=chain.invoke(input_text, code)
+    doctype_index = modified_code['text'].find("<!DOCTYPE html>")
+    doctype_index_last=modified_code['text'].find("</html>")
+    final_code=modified_code['text'][doctype_index:doctype_index_last+7]
 
     return final_code
 

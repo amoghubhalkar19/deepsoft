@@ -16,7 +16,8 @@ def main():
             st.write("You entered:", user_text)
             code = utils.generate_code(user_text)
             utils.write_to_file(code)
-            utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
+            #change the path D:\deepsoft to your local folder
+            utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input") 
             with st.spinner('Deploying website...'):
                 website_url = utils.deploy_render_api()
                 time.sleep(90)
