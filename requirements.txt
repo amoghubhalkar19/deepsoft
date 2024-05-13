@@ -1,17 +1,3 @@
-Probability and Statistics:
-50 challenging problems in probability
-Stats 110
-Heard on the Street
-Linear Algebra
-
-Machine Learning:
-Analytics Vidhya
-Towards Data Science
-
-Data Interpretation and Inference:
-
-DSA:
-Algozenith
-OOPs
-contest on codeforces
-practice on leetcode
+langchain==0.1.19
+huggingface-hub==0.23.0
+requests==2.31.0
