@@ -123,11 +123,11 @@ def write_to_file(code):
 def perform_modifications(input_text, code):
 
     prompt=PromptTemplate(
-        input_variables=["text", "input_code"],
-        template='''Task: {text}
-                    code:{input_code}
+        input_variables=["input_text", "code"],
+        template='''Task: {input_text}
+                    code: {code}
 
-           Task: Modify the existing product website to incorporate specific changes based on user input.
+           Task: Modify the existing product website code to incorporate specific changes based on user input.
             Objective:
             You are tasked with making modifications to an existing product website to enhance its design and functionality. The website showcases a fictional product and currently consists of several sections including Header, Hero, Features, Pricing, Banner, FAQ, and Footer. Your goal is to update the website according to the provided input text while adhering to modern design principles and coding techniques.
 
@@ -147,7 +147,7 @@ def perform_modifications(input_text, code):
     )
 
     chain=LLMChain(llm=HuggingFaceHub(repo_id='mistralai/Mistral-7B-Instruct-v0.2', model_kwargs={'temperature':0.1, 'max_new_tokens':8000}, huggingfacehub_api_token="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"), prompt=prompt)
-    modified_code=chain.invoke(input_text, code)
+    modified_code=chain.invoke({'input_text':input_text, 'code':code})
     doctype_index = modified_code['text'].find("<!DOCTYPE html>")
     doctype_index_last=modified_code['text'].find("</html>")
     final_code=modified_code['text'][doctype_index:doctype_index_last+7]

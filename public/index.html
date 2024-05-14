@@ -3,7 +3,7 @@
          <head>
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Credit Card Company</title>
+             <title>Cab Service</title>
              <style>
                  * {
                      margin: 0;
@@ -18,7 +18,7 @@
 
                  /* Header */
                  header {
-                     background-color: #3498db;
+                     background-color: #34495e;
                      color: #fff;
                      padding: 20px;
                  }
@@ -36,13 +36,13 @@
                  }
 
                  header nav a:hover {
-                     background-color: #5e5e5e;
+                     background-color: #5e6e85;
                  }
 
                  /* Hero */
                  .hero {
                      height: 100vh;
-                     background-image: url('card.jpg');
+                     background-image: url('taxi.jpg');
                      background-size: cover;
                      background-position: center;
                      display: flex;
@@ -54,106 +54,91 @@
                  }
 
                  .hero button {
-                     background-color: #4CAF50;
+                     background-color: #fff;
+                     color: #34495e;
                      border: none;
-                     color: #fff;
-                     padding: 15px 32px;
-                     text-align: center;
-                     text-decoration: none;
-                     display: inline-block;
-                     font-size: 16px;
-                     margin: 4px 2px;
+                     padding: 10px 20px;
                      cursor: pointer;
+                 }
+
+                 .hero button:hover {
+                     background-color: #5e6e85;
+                     color: #fff;
                  }
 
                  /* Features */
                  .features {
-                     background-color: #f1f1f1;
-                     padding: 60px;
-                 }
-
-                 .features h2 {
-                     text-align: center;
-                 }
-
-                 .features ul {
+                     padding: 50px;
                      display: flex;
                      justify-content: space-around;
                      flex-wrap: wrap;
                  }
 
-                 .features li {
+                 .feature {
                      width: 30%;
-                     margin-bottom: 30px;
+                     margin-bottom: 50px;
                      text-align: center;
-                     background-color: #f9f9f9;
+                     background-color: #f1f1f1;
                      padding: 20px;
-                     border: 1px solid #ddd;
-                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                     border-radius: 5px;
+                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                  }
 
-                 .features li h3 {
+                 .feature h2 {
                      margin: 0;
                  }
 
-                 .features li p {
-                     margin: 0;
+                 .feature p {
+                     margin: 10px 0;
                  }
 
                  /* Pricing */
                  .pricing {
-                     background-color: #f1f1f1;
-                     padding: 60px;
-                 }
-
-                 .pricing h2 {
-                     text-align: center;
-                 }
-
-                 .pricing ul {
+                     padding: 50px;
                      display: flex;
                      justify-content: space-around;
-                     flex-wrap: wrap;
                  }
 
-                 .pricing li {
+                 .pricing-plan {
                      width: 30%;
-                     background-color: #fff;
-                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                     margin-bottom: 30px;
-                     padding: 20px;
                      text-align: center;
+                     background-color: #f1f1f1;
+                     padding: 20px;
+                     border-radius: 5px;
+                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                  }
 
-                 .pricing li h3 {
+                 .pricing-plan h2 {
                      margin: 0;
                  }
 
-                 .pricing li p {
-                     margin: 0;
+                 .pricing-plan p {
+                     margin: 10px 0;
                  }
 
                  /* Banner */
                  .banner {
-                     background-color: #4CAF50;
+                     height: 200px;
+                     background-color: #5e6e85;
                      color: #fff;
-                     padding: 20px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
                      text-align: center;
                  }
 
                  /* FAQ */
                  .faq {
-                     background-color: #f1f1f1;
-                     padding: 60px;
+                     padding: 50px;
                  }
 
                  .faq h2 {
-                     text-align: center;
+                     margin: 0;
                  }
 
                  .faq ul {
-                     list-style-type: none;
                      padding: 0;
+                     list-style: none;
                  }
 
                  .faq li {
@@ -161,8 +146,10 @@
                  }
 
                  .faq li:before {
-                     content: "\2014";
-                     color: #aaa;
+                     content: 'Q: ';
+                     display: inline-block;
+                     width: 20px;
+                     text-align: right;
                      margin-right: 10px;
                  }
 
@@ -172,7 +159,7 @@
 
                  /* Footer */
                  footer {
-                     background-color: #3498db;
+                     background-color: #34495e;
                      color: #fff;
                      padding: 20px;
                      text-align: center;
@@ -181,16 +168,11 @@
                  footer a {
                      color: #fff;
                      text-decoration: none;
-                     margin: 0 10px;
+                     margin: 0 5px;
                  }
 
                  footer a:hover {
                      color: #ccc;
-                 }
-
-                 footer i {
-                     color: #fff;
-                     margin: 0 5px;
                  }
              </style>
          </head>
@@ -203,72 +185,64 @@
                      <a href="#faq">FAQ</a>
                  </nav>
              </header>
-             <section id="hero" class="hero">
-                 <h1>Welcome to Our Credit Card Company</h1>
-                 <button>Apply Now</button>
+             <section class="hero" id="hero">
+                 <h1>Get a Cab in Minutes</h1>
+                 <button>Book Now</button>
              </section>
-             <section id="features" class="features">
-                 <h2>Key Features</h2>
-                 <ul>
-                     <li>
-                         <h3>Rewards Program</h3>
-                         <p>Earn points for every purchase</p>
-                     </li>
-                     <li>
-                         <h3>Low Interest Rates</h3>
-                         <p>Competitive interest rates</p>
-                     </li>
-                     <li>
-                         <h3>Secure Transactions</h3>
-                         <p>Protected by advanced encryption</p>
-                     </li>
-                 </ul>
+             <section class="features" id="features">
+                 <div class="feature">
+                     <h2>Fast and Reliable</h2>
+                     <p>Our cabs are always on time and ready to go.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>Affordable Prices</h2>
+                     <p>We offer competitive pricing to ensure affordability.</p>
+                 </div>
+                 <div class="feature">
+                     <h2>24/7 Customer Support</h2>
+                     <p>Our dedicated support team is available round the clock.</p>
+                 </div>
              </section>
-             <section id="pricing" class="pricing">
-                 <h2>Pricing Plans</h2>
-                 <ul>
-                     <li>
-                         <h3>Basic</h3>
-                         <p>$0/month</p>
-                     </li>
-                     <li>
-                         <h3>Standard</h3>
-                         <p>$10/month</p>
-                     </li>
-                     <li>
-                         <h3>Premium</h3>
-                         <p>$20/month</p>
-                     </li>
-                 </ul>
+             <section class="pricing" id="pricing">
+                 <div class="pricing-plan">
+                     <h2>Standard</h2>
+                     <p>$10 per hour</p>
+                 </div>
+                 <div class="pricing-plan">
+                     <h2>Premium</h2>
+                     <p>$15 per hour</p>
+                 </div>
+                 <div class="pricing-plan">
+                     <h2>Luxury</h2>
+                     <p>$20 per hour</p>
+                 </div>
              </section>
-             <section id="banner" class="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Sign up now and get a 10% discount on your first purchase</p>
+             <section class="banner">
+                 <h1>Limited Time Offer!</h1>
+                 <p>Book a Premium cab and get a 10% discount.</p>
              </section>
-             <section id="faq" class="faq">
+             <section class="faq" id="faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <h3>How do I apply for a credit card?</h3>
-                         <p>You can apply online or visit one of our branches</p>
+                         <p>Q: How do I book a cab?</p>
+                         <p>A: You can book a cab by calling our customer support or using our mobile app.</p>
                      </li>
                      <li>
-                         <h3>What is the interest rate for the credit card?</h3>
-                         <p>Interest rates vary depending on the plan</p>
+                         <p>Q: What payment methods do you accept?</p>
+                         <p>A: We accept all major credit and debit cards.</p>
                      </li>
                      <li>
-                         <h3>Is there a rewards program for the credit card?</h3>
-                         <p>Yes, you can earn points for every purchase</p>
+                         <p>Q: Can I cancel a booking?</p>
+                         <p>A: Yes, you can cancel a booking up to 30 minutes before the scheduled pickup time.</p>
                      </li>
                  </ul>
              </section>
              <footer>
-                 <p>&copy; 2022 Credit Card Company. All rights reserved.</p>
+                 <p>&copy; 2022 Cab Service. All rights reserved.</p>
                  <a href="#">Terms of Service</a>
                  <a href="#">Privacy Policy</a>
-                 <i class="fab fa-facebook-f"></i>
-                 <i class="fab fa-twitter"></i>
-                 <i class="fab fa-instagram"></i>
+                 <a href="#">Contact Us</a>
              </footer>
          </body>
          </html>
