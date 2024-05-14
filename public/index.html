@@ -1,293 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroShop - Your One-Stop Electronics Shop</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Software Services Company - Product</title>
+             <style>
+                 * {
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                 }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
+                 body {
+                     font-family: 'Montserrat', sans-serif;
+                     line-height: 1.6;
+                 }
 
-        a {
-            text-decoration: none;
-            color: #333;
-        }
+                 /* Header */
+                 header {
+                     background-color: #343a40;
+                     color: #fff;
+                     padding: 20px;
+                 }
 
-        ul {
-            list-style: none;
-        }
+                 header nav {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
+                 header nav a {
+                     color: #fff;
+                     text-decoration: none;
+                     padding: 10px;
+                 }
 
-        /* Header */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
+                 header nav a:hover {
+                     background-color: #5e6368;
+                 }
 
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+                 /* Hero */
+                 .hero {
+                     height: 100vh;
+                     background-image: url('hero.jpg');
+                     background-size: cover;
+                     background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
+                     font-size: 2rem;
+                 }
 
-        header nav a {
-            color: #fff;
-            padding: 10px;
-        }
+                 .hero button {
+                     background-color: #4CAF50;
+                     border: none;
+                     color: #fff;
+                     padding: 15px 32px;
+                     text-align: center;
+                     text-decoration: none;
+                     display: inline-block;
+                     font-size: 16px;
+                     margin: 4px 2px;
+                     cursor: pointer;
+                 }
 
-        header nav a:hover {
-            background-color: #555;
-        }
+                 /* Features */
+                 .features {
+                     background-color: #f1f1f1;
+                     padding: 60px;
+                 }
 
-        /* Hero */
-        .hero {
-            height: 500px;
-            background-image: url('https://source.unsplash.com/random/electronics,gadgets,technology');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            font-size: 3rem;
-        }
+                 .features h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
 
-        .hero button {
-            background-color: #4CAF50;
-            border: none;
-            color: #fff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
+                 .features .feature {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     padding: 20px;
+                     border-bottom: 1px solid #ddd;
+                 }
 
-        /* Features */
-        .features {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 50px;
-        }
+                 .features .feature i {
+                     font-size: 6rem;
+                     color: #5e6368;
+                 }
 
-        .feature {
-            width: 30%;
-            margin: 20px;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+                 .features .feature p {
+                     margin: 0;
+                 }
 
-        .feature h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
+                 /* Pricing */
+                 .pricing {
+                     background-color: #ddd;
+                     padding: 60px;
+                 }
 
-        .feature p {
-            margin: 10px 0;
-            line-height: 1.4;
-        }
+                 .pricing h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
 
-        /* Pricing */
-        .pricing {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 50px;
-        }
+                 .pricing .plan {
+                     background-color: #fff;
+                     border: 1px solid #ddd;
+                     padding: 40px;
+                     text-align: center;
+                     margin-right: 20px;
+                     flex-basis: calc(33.33% - 20px);
+                 }
 
-        .pricing card {
-            width: 30%;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+                 .pricing .plan h3 {
+                     margin: 0;
+                 }
 
-        .pricing card h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
+                 .pricing .plan p {
+                     margin: 10px 0;
+                 }
 
-        .pricing card p {
-            margin: 10px 0;
-            line-height: 1.4;
-        }
+                 /* Banner */
+                 .banner {
+                     background-color: #343a40;
+                     color: #fff;
+                     padding: 40px;
+                     text-align: center;
+                 }
 
-        /* Banner */
-        .banner {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+                 /* FAQ */
+                 .faq {
+                     padding: 60px;
+                 }
 
-        /* FAQ */
-        .faq {
-            padding: 50px;
-        }
+                 .faq h2 {
+                     text-align: center;
+                     margin-bottom: 40px;
+                 }
 
-        .faq h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
+                 .faq ul {
+                     list-style-type: none;
+                     padding: 0;
+                 }
 
-        .faq p {
-            margin: 10px 0;
-            line-height: 1.4;
-        }
+                 .faq li {
+                     margin-bottom: 20px;
+                 }
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+                 .faq li:before {
+                     content: "\2014";
+                     color: #5e6368;
+                     margin-right: 10px;
+                 }
 
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 10px;
-        }
+                 /* Footer */
+                 footer {
+                     background-color: #343a40;
+                     color: #fff;
+                     padding: 20px;
+                     text-align: center;
+                 }
 
-        footer a:hover {
-            color: #ccc;
-        }
+                 footer a {
+                     color: #fff;
+                     text-decoration: none;
+                     margin: 0 10px;
+                 }
 
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .features .feature {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
+                 footer a:hover {
+                     text-decoration: underline;
+                 }
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Welcome to ElectroShop!</h1>
-        <button>Shop Now</button>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-        <div class="feature">
-            <h2>Feature 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-        <div class="feature">
-            <h2>Feature 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-        <div class="feature">
-            <h2>Feature 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing">
-        <div class="card">
-            <h2>Basic</h2>
-            <p>$9.99/month</p>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-            </ul>
-            <button>Sign Up</button>
-        </div>
-        <div class="card">
-            <h2>Pro</h2>
-            <p>$19.99/month</p>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-            </ul>
-            <button>Sign Up</button>
-        </div>
-        <div class="card">
-            <h2>Premium</h2>
-            <p>$29.99/month</p>
-            <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
-                <li>Feature 4</li>
-                <li>Feature 5</li>
-            </ul>
-            <button>Sign Up</button>
-        </div>
-    </section>
-
-    <!-- Banner -->
-    <section class="banner">
-        <h2>Limited Time Offer!</h2>
-        <p>Get 20% off your first purchase with code ELECTRO20</p>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div>
-            <details>
-                <summary>How do I create an account?</summary>
-                <p>To create an account, click on the "Sign Up" button in the header and follow the prompts to enter your email address and create a password.</p>
-            </details>
-            <details>
-                <summary>How do I place an order?</summary>
-                <p>To place an order, browse our shop and add items to your cart. Once you're ready to checkout, click on the cart icon in the header and follow the prompts to enter your shipping and payment information.</p>
-            </details>
-            <details>
-                <summary>What is your return policy?</summary>
-                <p>We offer a 30-day money-back guarantee on all purchases. If you're not satisfied with your product, simply contact us within 30 days of receiving it and we'll arrange for a return.</p>
-            </details>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2022 ElectroShop. All rights reserved.</p>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Contact Us</a>
-    </footer>
-
-</body>
-</html>
+                 footer i {
+                     font-size: 1.5rem;
+                 }
+             </style>
+         </head>
+         <body>
+             <header>
+                 <nav>
+                     <a href="#hero">Home</a>
+                     <a href="#features">Features</a>
+                     <a href="#pricing">Pricing</a>
+                     <a href="#faq">FAQ</a>
+                 </nav>
+             </header>
+             <section class="hero" id="hero">
+                 <h1>Welcome to Our Software Product</h1>
+                 <button>Learn More</button>
+             </section>
+             <section class="features" id="features">
+                 <h2>Key Features</h2>
+                 <div class="feature">
+                     <i class="fas fa-desktop"></i>
+                     <div>
+                         <h3>Cross-Platform</h3>
+                         <p>Our software runs seamlessly on all major platforms.</p>
+                     </div>
+                 </div>
+                 <div class="feature">
+                     <i class="fas fa-cog"></i>
+                     <div>
+                         <h3>Customizable</h3>
+                         <p>Tailor the software to your unique needs.</p>
+                     </div>
+                 </div>
+                 <div class="feature">
+                     <i class="fas fa-support"></i>
+                     <div>
+                         <h3>24/7 Support</h3>
+                         <p>Our dedicated support team is always available to help.</p>
+                     </div>
+                 </div>
+             </section>
+             <section class="pricing" id="pricing">
+                 <h2>Pricing Plans</h2>
+                 <div class="plan">
+                     <h3>Basic</h3>
+                     <p>$9.99/month</p>
+                     <p>10GB Storage</p>
+                     <p>5 Users</p>
+                 </div>
+                 <div class="plan">
+                     <h3>Pro</h3>
+                     <p>$19.99/month</p>
+                     <p>50GB Storage</p>
+                     <p>10 Users</p>
+                 </div>
+                 <div class="plan">
+                     <h3>Premium</h3>
+                     <p>$29.99/month</p>
+                     <p>100GB Storage</p>
+                     <p>20 Users</p>
+                 </div>
+             </section>
+             <section class="banner" id="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Sign up now and get a 15% discount on your first month.</p>
+                 <button>Sign Up</button>
+             </section>
+             <section class="faq" id="faq">
+                 <h2>Frequently Asked Questions</h2>
+                 <ul>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <div>
+                             <h3>What is your software used for?</h3>
+                             <p>Our software is a versatile tool that can be used for various purposes, including project management, customer relationship management, and more.</p>
+                         </div>
+                     </li>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <div>
+                             <h3>Is there a free trial?</h3>
+                             <p>Yes, we offer a 30-day free trial for new users.</p>
+                         </div>
+                     </li>
+                     <li>
+                         <i class="fas fa-question"></i>
+                         <div>
+                             <h3>What payment methods do you accept?</h3>
+                             <p>We accept all major credit cards and PayPal.</p>
+                         </div>
+                     </li>
+                 </ul>
+             </section>
+             <footer>
+                 <p>&copy; 2022 Software Services Company. All rights reserved.</p>
+                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+             </footer>
+         </body>
+         </html>
