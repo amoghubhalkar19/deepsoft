@@ -1,277 +1,310 @@
 <!DOCTYPE html>
-         <html lang="en">
-         <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Software Services Company - Product</title>
-             <style>
-                 * {
-                     margin: 0;
-                     padding: 0;
-                     box-sizing: border-box;
-                 }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                 body {
-                     font-family: 'Montserrat', sans-serif;
-                     line-height: 1.6;
-                 }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
 
-                 /* Header */
-                 header {
-                     background-color: #343a40;
-                     color: #fff;
-                     padding: 20px;
-                 }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
 
-                 header nav {
-                     display: flex;
-                     justify-content: space-between;
-                     align-items: center;
-                 }
+        ul {
+            list-style: none;
+        }
 
-                 header nav a {
-                     color: #fff;
-                     text-decoration: none;
-                     padding: 10px;
-                 }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
 
-                 header nav a:hover {
-                     background-color: #5e6368;
-                 }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
 
-                 /* Hero */
-                 .hero {
-                     height: 100vh;
-                     background-image: url('hero.jpg');
-                     background-size: cover;
-                     background-position: center;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     text-align: center;
-                     color: #fff;
-                     font-size: 2rem;
-                 }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
 
-                 .hero button {
-                     background-color: #4CAF50;
-                     border: none;
-                     color: #fff;
-                     padding: 15px 32px;
-                     text-align: center;
-                     text-decoration: none;
-                     display: inline-block;
-                     font-size: 16px;
-                     margin: 4px 2px;
-                     cursor: pointer;
-                 }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-                 /* Features */
-                 .features {
-                     background-color: #f1f1f1;
-                     padding: 60px;
-                 }
+        nav ul {
+            display: flex;
+        }
 
-                 .features h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        nav ul li {
+            margin-left: 20px;
+        }
 
-                 .features .feature {
-                     display: flex;
-                     justify-content: space-between;
-                     align-items: center;
-                     padding: 20px;
-                     border-bottom: 1px solid #ddd;
-                 }
+        nav ul li a {
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-                 .features .feature i {
-                     font-size: 6rem;
-                     color: #5e6368;
-                 }
+        nav ul li a:hover {
+            background-color: #555;
+        }
 
-                 .features .feature p {
-                     margin: 0;
-                 }
+        .hero {
+            height: 500px;
+            background-image: url('coffee.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+        }
 
-                 /* Pricing */
-                 .pricing {
-                     background-color: #ddd;
-                     padding: 60px;
-                 }
+        .hero button {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-                 .pricing h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        .hero button:hover {
+            background-color: #333;
+            color: #fff;
+        }
 
-                 .pricing .plan {
-                     background-color: #fff;
-                     border: 1px solid #ddd;
-                     padding: 40px;
-                     text-align: center;
-                     margin-right: 20px;
-                     flex-basis: calc(33.33% - 20px);
-                 }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px;
+        }
 
-                 .pricing .plan h3 {
-                     margin: 0;
-                 }
+        .features div {
+            width: 30%;
+            margin-bottom: 50px;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-                 .pricing .plan p {
-                     margin: 10px 0;
-                 }
+        .features h2 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-                 /* Banner */
-                 .banner {
-                     background-color: #343a40;
-                     color: #fff;
-                     padding: 40px;
-                     text-align: center;
-                 }
+        .features p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
 
-                 /* FAQ */
-                 .faq {
-                     padding: 60px;
-                 }
+        .pricing {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
 
-                 .faq h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        .pricing div {
+            width: 30%;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-                 .faq ul {
-                     list-style-type: none;
-                     padding: 0;
-                 }
+        .pricing h2 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-                 .faq li {
-                     margin-bottom: 20px;
-                 }
+        .pricing p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
 
-                 .faq li:before {
-                     content: "\2014";
-                     color: #5e6368;
-                     margin-right: 10px;
-                 }
+        .pricing p span {
+            font-weight: bold;
+        }
 
-                 /* Footer */
-                 footer {
-                     background-color: #343a40;
-                     color: #fff;
-                     padding: 20px;
-                     text-align: center;
-                 }
+        .banner {
+            height: 200px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+        }
 
-                 footer a {
-                     color: #fff;
-                     text-decoration: none;
-                     margin: 0 10px;
-                 }
+        .faq {
+            padding: 50px;
+        }
 
-                 footer a:hover {
-                     text-decoration: underline;
-                 }
+        .faq h2 {
+            margin: 0;
+            font-size: 24px;
+        }
 
-                 footer i {
-                     font-size: 1.5rem;
-                 }
-             </style>
-         </head>
-         <body>
-             <header>
-                 <nav>
-                     <a href="#hero">Home</a>
-                     <a href="#features">Features</a>
-                     <a href="#pricing">Pricing</a>
-                     <a href="#faq">FAQ</a>
-                 </nav>
-             </header>
-             <section class="hero" id="hero">
-                 <h1>Welcome to Our Software Product</h1>
-                 <button>Learn More</button>
-             </section>
-             <section class="features" id="features">
-                 <h2>Key Features</h2>
-                 <div class="feature">
-                     <i class="fas fa-desktop"></i>
-                     <div>
-                         <h3>Cross-Platform</h3>
-                         <p>Our software runs seamlessly on all major platforms.</p>
-                     </div>
-                 </div>
-                 <div class="feature">
-                     <i class="fas fa-cog"></i>
-                     <div>
-                         <h3>Customizable</h3>
-                         <p>Tailor the software to your unique needs.</p>
-                     </div>
-                 </div>
-                 <div class="feature">
-                     <i class="fas fa-support"></i>
-                     <div>
-                         <h3>24/7 Support</h3>
-                         <p>Our dedicated support team is always available to help.</p>
-                     </div>
-                 </div>
-             </section>
-             <section class="pricing" id="pricing">
-                 <h2>Pricing Plans</h2>
-                 <div class="plan">
-                     <h3>Basic</h3>
-                     <p>$9.99/month</p>
-                     <p>10GB Storage</p>
-                     <p>5 Users</p>
-                 </div>
-                 <div class="plan">
-                     <h3>Pro</h3>
-                     <p>$19.99/month</p>
-                     <p>50GB Storage</p>
-                     <p>10 Users</p>
-                 </div>
-                 <div class="plan">
-                     <h3>Premium</h3>
-                     <p>$29.99/month</p>
-                     <p>100GB Storage</p>
-                     <p>20 Users</p>
-                 </div>
-             </section>
-             <section class="banner" id="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Sign up now and get a 15% discount on your first month.</p>
-                 <button>Sign Up</button>
-             </section>
-             <section class="faq" id="faq">
-                 <h2>Frequently Asked Questions</h2>
-                 <ul>
-                     <li>
-                         <i class="fas fa-question"></i>
-                         <div>
-                             <h3>What is your software used for?</h3>
-                             <p>Our software is a versatile tool that can be used for various purposes, including project management, customer relationship management, and more.</p>
-                         </div>
-                     </li>
-                     <li>
-                         <i class="fas fa-question"></i>
-                         <div>
-                             <h3>Is there a free trial?</h3>
-                             <p>Yes, we offer a 30-day free trial for new users.</p>
-                         </div>
-                     </li>
-                     <li>
-                         <i class="fas fa-question"></i>
-                         <div>
-                             <h3>What payment methods do you accept?</h3>
-                             <p>We accept all major credit cards and PayPal.</p>
-                         </div>
-                     </li>
-                 </ul>
-             </section>
-             <footer>
-                 <p>&copy; 2022 Software Services Company. All rights reserved.</p>
-                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-             </footer>
-         </body>
-         </html>
+        .faq ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .faq li {
+            margin-bottom: 20px;
+        }
+
+        .faq li:before {
+            content: 'Q:';
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .faq li p {
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            color: #ccc;
+        }
+
+        @media screen and (max-width: 768px) {
+            .features div {
+                width: 100%;
+            }
+
+            .pricing div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Coffee Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>Discover Our Delicious Coffee</h1>
+        <button>Order Now</button>
+    </section>
+
+    <section id="features" class="features">
+        <div>
+            <h2>Rich Flavor</h2>
+            <p>Our coffee beans are carefully selected from the best farms around the world to ensure a rich, full-bodied flavor.</p>
+        </div>
+        <div>
+            <h2>Smooth Texture</h2>
+            <p>Our roasting process brings out the natural smoothness and complexity of each bean, resulting in a delightful drinking experience.</p>
+        </div>
+        <div>
+            <h2>Sustainably Sourced</h2>
+            <p>We are committed to sourcing our beans ethically and sustainably, ensuring that both our customers and the farmers are treated fairly.</p>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div>
+            <h2>Regular</h2>
+            <p>$2.50 <span>/ cup</span></p>
+        </div>
+        <div>
+            <h2>Large</h2>
+            <p>$3.50 <span>/ cup</span></p>
+        </div>
+        <div>
+            <h2>Extra Large</h2>
+            <p>$4.50 <span>/ cup</span></p>
+        </div>
+    </section>
+
+    <section id="banner" class="banner">
+        <p>Limited Time Offer: Buy 3 cups, get 1 free!</p>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>
+                <p>Q: What types of coffee do you offer?</p>
+                <p>A: We offer a variety of roasts and blends to suit every taste preference.</p>
+            </li>
+            <li>
+                <p>Q: Do you offer decaf coffee?</p>
+                <p>A: Yes, we have a delicious decaf option for those who prefer a caffeine-free experience.</p>
+            </li>
+            <li>
+                <p>Q: Can I customize my coffee?</p>
+                <p>A: Absolutely! We offer a range of milk options, sweeteners, and flavorings to make your coffee just the way you like it.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 Coffee Shop. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

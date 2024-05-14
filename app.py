@@ -19,7 +19,7 @@ def main():
             utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input") 
             with st.spinner('Deploying website...'):
                 website_url = utils.deploy_render_api()
-                time.sleep(90)
+                time.sleep(100)
             # Show website URL and iframe once deployment is complete
             st.write(f'Website Link: {website_url}')
             st.write("Here's your website:")
@@ -32,7 +32,7 @@ def main():
                 utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
                 with st.spinner('Deploying website...'):
                     website_url = utils.deploy_render_api()
-                    time.sleep(90)
+                    time.sleep(100)
             # Show website URL and iframe once deployment is complete
                 st.write(f'Website Link: {website_url}')
                 st.write("Here's your website:")
