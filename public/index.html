@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarSale - Buy & Sell Used Cars</title>
+    <title>ElectroShop - Your One-Stop Electronics Shop</title>
     <style>
         * {
             margin: 0;
@@ -32,45 +32,32 @@
             padding: 20px;
         }
 
+        /* Header */
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-
-        nav {
+        header nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav ul {
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li a {
+        header nav a {
             color: #fff;
             padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
 
-        nav ul li a:hover {
+        header nav a:hover {
             background-color: #555;
         }
 
+        /* Hero */
         .hero {
             height: 500px;
-            background-image: url('car.jpg');
+            background-image: url('https://source.unsplash.com/random/electronics,gadgets,technology');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -78,13 +65,23 @@
             align-items: center;
             text-align: center;
             color: #fff;
-            font-size: 36px;
+            font-size: 3rem;
         }
 
-        .hero h1 {
-            margin: 0;
+        .hero button {
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
 
+        /* Features */
         .features {
             display: flex;
             justify-content: space-around;
@@ -93,93 +90,77 @@
             padding: 50px;
         }
 
-        .features div {
+        .feature {
             width: 30%;
+            margin: 20px;
             text-align: center;
-            margin-bottom: 50px;
-            background-color: #f5f5f5;
+            background-color: #f1f1f1;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .features h2 {
+        .feature h2 {
             margin: 0;
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
-        .features p {
+        .feature p {
             margin: 10px 0;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
+        /* Pricing */
         .pricing {
-            background-color: #333;
-            color: #fff;
-            padding: 50px;
-        }
-
-        .pricing h2 {
-            margin: 0;
-            font-size: 32px;
-        }
-
-        .pricing ul {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            list-style: none;
+            padding: 50px;
         }
 
-        .pricing ul li {
+        .pricing card {
             width: 30%;
             text-align: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .pricing ul li:not(:last-child) {
-            border-right: 1px solid #fff;
+        .pricing card h2 {
+            margin: 0;
+            font-size: 1.5rem;
         }
 
-        .pricing ul li p {
+        .pricing card p {
             margin: 10px 0;
+            line-height: 1.4;
         }
 
+        /* Banner */
         .banner {
-            background-color: #333;
+            background-color: #4CAF50;
             color: #fff;
-            padding: 50px;
+            padding: 20px;
             text-align: center;
         }
 
+        /* FAQ */
         .faq {
             padding: 50px;
         }
 
         .faq h2 {
             margin: 0;
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
-        .faq ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .faq p {
+            margin: 10px 0;
+            line-height: 1.4;
         }
 
-        .faq ul li {
-            margin-bottom: 20px;
-        }
-
-        .faq ul li:before {
-            content: 'Q:';
-            margin-right: 10px;
-            color: #333;
-        }
-
-        .faq ul li p {
-            margin: 0;
-        }
-
+        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
@@ -189,15 +170,17 @@
 
         footer a {
             color: #fff;
-            margin: 0 5px;
+            text-decoration: none;
+            margin: 10px;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #ccc;
         }
 
+        /* Media Queries */
         @media screen and (max-width: 768px) {
-            .features div {
+            .features .feature {
                 width: 100%;
             }
         }
@@ -205,88 +188,105 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>CarSale</h1>
         <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
-    <section id="hero" class="hero">
-        <h1>Buy & Sell Used Cars with Confidence</h1>
-        <button>Find Cars</button>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Welcome to ElectroShop!</h1>
+        <button>Shop Now</button>
     </section>
 
-    <section id="features" class="container features">
-        <div>
-            <h2>Easy to Use</h2>
-            <p>Our platform is designed to be user-friendly, making it easy for you to buy or sell a car in just a few clicks.</p>
+    <!-- Features -->
+    <section class="features">
+        <div class="feature">
+            <h2>Feature 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
         </div>
-        <div>
-            <h2>Secure Transactions</h2>
-            <p>We ensure secure transactions through our trusted payment gateway and escrow service.</p>
+        <div class="feature">
+            <h2>Feature 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
         </div>
-        <div>
-            <h2>Wide Selection</h2>
-            <p>With a wide selection of cars from various makes and models, you're sure to find the perfect one for you.</p>
+        <div class="feature">
+            <h2>Feature 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
-        <h2>Pricing Plans</h2>
-        <ul>
-            <li>
-                <h3>Free</h3>
-                <p>$0/month</p>
-                <p>List unlimited cars</p>
-                <p>Contact buyers directly</p>
-            </li>
-            <li>
-                <h3>Premium</h3>
-                <p>$9.99/month</p>
-                <p>List unlimited cars</p>
-                <p>Contact buyers directly</p>
-                <p>Featured listing</p>
-            </li>
-        </ul>
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="card">
+            <h2>Basic</h2>
+            <p>$9.99/month</p>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
+        <div class="card">
+            <h2>Pro</h2>
+            <p>$19.99/month</p>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
+        <div class="card">
+            <h2>Premium</h2>
+            <p>$29.99/month</p>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+                <li>Feature 5</li>
+            </ul>
+            <button>Sign Up</button>
+        </div>
     </section>
 
-    <section id="banner" class="banner">
-        <p>Limited Time Offer!</p>
-        <button>Sign Up Now</button>
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Limited Time Offer!</h2>
+        <p>Get 20% off your first purchase with code ELECTRO20</p>
     </section>
 
-    <section id="faq" class="faq">
+    <!-- FAQ -->
+    <section class="faq">
         <h2>Frequently Asked Questions</h2>
-        <ul>
-            <li>
-                <p>Q: How does the buying process work?</p>
-                <p>A: Once you find a car you're interested in, you can contact the seller directly through our platform to arrange a test drive or inspection.</p>
-            </li>
-            <li>
-                <p>Q: Is it safe to buy a car from a stranger?</p>
-                <p>A: We ensure secure transactions through our trusted payment gateway and escrow service, which holds the funds until the car has been delivered and inspected by the buyer.</p>
-            </li>
-            <li>
-                <p>Q: How do I sell my car on CarSale?</p>
-                <p>A: Simply create a listing for your car, including details such as make, model, year, price, and condition. Once a buyer expresses interest, you can communicate with them through our platform to arrange a sale.</p>
-            </li>
-        </ul>
+        <div>
+            <details>
+                <summary>How do I create an account?</summary>
+                <p>To create an account, click on the "Sign Up" button in the header and follow the prompts to enter your email address and create a password.</p>
+            </details>
+            <details>
+                <summary>How do I place an order?</summary>
+                <p>To place an order, browse our shop and add items to your cart. Once you're ready to checkout, click on the cart icon in the header and follow the prompts to enter your shipping and payment information.</p>
+            </details>
+            <details>
+                <summary>What is your return policy?</summary>
+                <p>We offer a 30-day money-back guarantee on all purchases. If you're not satisfied with your product, simply contact us within 30 days of receiving it and we'll arrange for a return.</p>
+            </details>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2022 CarSale. All rights reserved.</p>
+        <p>&copy; 2022 ElectroShop. All rights reserved.</p>
         <a href="#">Terms of Service</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Contact Us</a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
     </footer>
 
 </body>
