@@ -19,11 +19,11 @@ def deploy_render_api(): #params when integrating as a whole: repo name, api key
         "plan": "starter",
         "ownerId": owner_id,
         "repo": {
-        "repoName": "amoghubhalkar19/deepsoft/public",
+        "repoName": "amoghubhalkar19/deepsoft",
             # "deployKeyID": deploy_key
         },
         "buildCommand": "echo 'Build complete'",
-        "publishDir": "./"
+        "publishDir": "./public"
     }   
 
     create_response = requests.post('https://api.render.com/v1/services', headers=headers, json=service_config)
