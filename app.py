@@ -26,6 +26,7 @@ def main():
             comps.iframe(website_url, height=500, scrolling=True)
 
             modifications_text=st.text_input("Enter modifications:", "")
+            
             if modifications_text:
                 code_modified=utils.perform_modifications(modifications_text, code)
                 utils.write_to_file(code_modified)
