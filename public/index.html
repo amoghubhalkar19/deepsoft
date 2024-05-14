@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Services & Consulting</title>
+    <title>CarSale - Buy & Sell Used Cars</title>
     <style>
         * {
             margin: 0;
@@ -32,35 +32,45 @@
             padding: 20px;
         }
 
-        .header {
+        header {
             background-color: #333;
             color: #fff;
             padding: 20px;
         }
 
-        .header h1 {
+        header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 32px;
         }
 
-        .nav {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .nav a {
-            color: #fff;
-            padding: 10px;
+        nav ul {
+            display: flex;
         }
 
-        .nav a:hover {
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
             background-color: #555;
         }
 
         .hero {
-            height: 100vh;
-            background-image: url('https://source.unsplash.com/random');
+            height: 500px;
+            background-image: url('car.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -71,17 +81,8 @@
             font-size: 36px;
         }
 
-        .hero button {
-            background-color: #4CAF50;
-            border: none;
-            color: #fff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
+        .hero h1 {
+            margin: 0;
         }
 
         .features {
@@ -92,56 +93,61 @@
             padding: 50px;
         }
 
-        .feature {
+        .features div {
             width: 30%;
-            margin: 20px;
             text-align: center;
-            background-color: #f1f1f1;
+            margin-bottom: 50px;
+            background-color: #f5f5f5;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .feature h2 {
+        .features h2 {
             margin: 0;
             font-size: 24px;
         }
 
-        .feature p {
+        .features p {
             margin: 10px 0;
             line-height: 1.6;
         }
 
         .pricing {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            background-color: #333;
+            color: #fff;
             padding: 50px;
         }
 
-        .pricing-card {
+        .pricing h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .pricing ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        .pricing ul li {
             width: 30%;
             text-align: center;
-            background-color: #f1f1f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .pricing-card h2 {
-            margin: 0;
-            font-size: 24px;
+        .pricing ul li:not(:last-child) {
+            border-right: 1px solid #fff;
         }
 
-        .pricing-card p {
+        .pricing ul li p {
             margin: 10px 0;
-            line-height: 1.6;
         }
 
         .banner {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 50px;
             text-align: center;
         }
 
@@ -154,82 +160,44 @@
             font-size: 24px;
         }
 
-        .faq p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-
         .faq ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
-        .faq li {
+        .faq ul li {
             margin-bottom: 20px;
         }
 
-        .faq li:before {
+        .faq ul li:before {
             content: 'Q:';
             margin-right: 10px;
             color: #333;
         }
 
-        .footer {
+        .faq ul li p {
+            margin: 0;
+        }
+
+        footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
 
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        .footer a:hover {
-            color: #ccc;
-        }
-
-        .social-media {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .social-media a {
+        footer a {
             color: #fff;
             margin: 0 5px;
         }
 
-        .social-media a:hover {
-            color: #ccc;
-        }
-
-        .scroll-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            line-height: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .scroll-top:hover {
-            background-color: #555;
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media screen and (max-width: 768px) {
-            .features .feature {
-                width: 100%;
-            }
-
-            .pricing .pricing-card {
+            .features div {
                 width: 100%;
             }
         }
@@ -237,126 +205,89 @@
 </head>
 <body>
 
-    <div class="container">
-        <header class="header">
-            <nav class="nav">
-                <h1>IT Services & Consulting</h1>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="hero" id="hero">
-            <h1>Welcome to IT Services & Consulting</h1>
-            <button>Get Started</button>
-        </section>
-
-        <section class="features" id="features">
-            <div class="feature">
-                <h2>Fast & Reliable</h2>
-                <p>Our services are designed to be fast and reliable, ensuring your business stays productive.</p>
-            </div>
-            <div class="feature">
-                <h2>Expert Consulting</h2>
-                <p>Our team of experts provides valuable insights and recommendations to help your business succeed.</p>
-            </div>
-            <div class="feature">
-                <h2>24/7 Support</h2>
-                <p>Our dedicated support team is available around the clock to address any issues that arise.</p>
-            </div>
-        </section>
-
-        <section class="pricing" id="pricing">
-            <div class="pricing-card">
-                <h2>Basic</h2>
-                <p>$99/month</p>
-                <ul>
-                    <li>24/7 Support</li>
-                    <li>Monthly Reporting</li>
-                    <li>Basic Security</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h2>Pro</h2>
-                <p>$199/month</p>
-                <ul>
-                    <li>24/7 Support</li>
-                    <li>Monthly Reporting</li>
-                    <li>Advanced Security</li>
-                    <li>Priority Support</li>
-                </ul>
-            </div>
-            <div class="pricing-card">
-                <h2>Enterprise</h2>
-                <p>Custom Pricing</p>
-                <ul>
-                    <li>24/7 Support</li>
-                    <li>Monthly Reporting</li>
-                    <li>Advanced Security</li>
-                    <li>Priority Support</li>
-                    <li>Custom Solutions</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="banner" id="banner">
-            <h2>Limited Time Offer!</h2>
-            <p>Sign up for our Pro plan before the end of the month and receive a 10% discount.</p>
-        </section>
-
-        <section class="faq" id="faq">
-            <h2>Frequently Asked Questions</h2>
+    <header>
+        <h1>CarSale</h1>
+        <nav>
             <ul>
-                <li>
-                    <h3>What services do you offer?</h3>
-                    <p>We offer a range of IT services, including consulting, support, and security solutions.</p>
-                </li>
-                <li>
-                    <h3>How do I get started?</h3>
-                    <p>Simply contact us to schedule a consultation and we'll help you get started.</p>
-                </li>
-                <li>
-                    <h3>What is your response time for support requests?</h3>
-                    <p>We aim to respond to all support requests within 1 hour.</p>
-                </li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <footer class="footer">
-            <p>&copy; 2022 IT Services & Consulting. All rights reserved.</p>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <a href="#" class="scroll-top">&uarr;</a>
-        </footer>
-    </div>
+    <section id="hero" class="hero">
+        <h1>Buy & Sell Used Cars with Confidence</h1>
+        <button>Find Cars</button>
+    </section>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script>
-        window.addEventListener('scroll', function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var scrollBottom = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, document.documentElement.clientHeight);
-            var scrollPercent = (scrollTop / (scrollBottom - document.documentElement.clientHeight)) * 100;
-            if (scrollPercent > 80) {
-                document.querySelector('.scroll-top').style.backgroundColor = '#555';
-            } else {
-                document.querySelector('.scroll-top').style.backgroundColor = '#333';
-            }
-        });
+    <section id="features" class="container features">
+        <div>
+            <h2>Easy to Use</h2>
+            <p>Our platform is designed to be user-friendly, making it easy for you to buy or sell a car in just a few clicks.</p>
+        </div>
+        <div>
+            <h2>Secure Transactions</h2>
+            <p>We ensure secure transactions through our trusted payment gateway and escrow service.</p>
+        </div>
+        <div>
+            <h2>Wide Selection</h2>
+            <p>With a wide selection of cars from various makes and models, you're sure to find the perfect one for you.</p>
+        </div>
+    </section>
 
-        document.querySelector('.scroll-top').addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <section id="pricing" class="pricing">
+        <h2>Pricing Plans</h2>
+        <ul>
+            <li>
+                <h3>Free</h3>
+                <p>$0/month</p>
+                <p>List unlimited cars</p>
+                <p>Contact buyers directly</p>
+            </li>
+            <li>
+                <h3>Premium</h3>
+                <p>$9.99/month</p>
+                <p>List unlimited cars</p>
+                <p>Contact buyers directly</p>
+                <p>Featured listing</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="banner" class="banner">
+        <p>Limited Time Offer!</p>
+        <button>Sign Up Now</button>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>
+                <p>Q: How does the buying process work?</p>
+                <p>A: Once you find a car you're interested in, you can contact the seller directly through our platform to arrange a test drive or inspection.</p>
+            </li>
+            <li>
+                <p>Q: Is it safe to buy a car from a stranger?</p>
+                <p>A: We ensure secure transactions through our trusted payment gateway and escrow service, which holds the funds until the car has been delivered and inspected by the buyer.</p>
+            </li>
+            <li>
+                <p>Q: How do I sell my car on CarSale?</p>
+                <p>A: Simply create a listing for your car, including details such as make, model, year, price, and condition. Once a buyer expresses interest, you can communicate with them through our platform to arrange a sale.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 CarSale. All rights reserved.</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </footer>
+
 </body>
 </html>
