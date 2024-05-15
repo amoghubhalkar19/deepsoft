@@ -1,275 +1,301 @@
 <!DOCTYPE html>
-         <html lang="en">
-         <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>CarSale - Buy and Sell Cars Online</title>
-             <style>
-                 * {
-                     margin: 0;
-                     padding: 0;
-                     box-sizing: border-box;
-                 }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Delights - Food Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                 body {
-                     font-family: 'Roboto', sans-serif;
-                     line-height: 1.6;
-                 }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
 
-                 a {
-                     text-decoration: none;
-                     color: #333;
-                 }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
 
-                 ul {
-                     list-style: none;
-                 }
+        ul {
+            list-style: none;
+        }
 
-                 .container {
-                     max-width: 1140px;
-                     margin: auto;
-                     padding: 0 20px;
-                 }
+        .container {
+            max-width: 1170px;
+            margin: auto;
+            padding: 0 20px;
+        }
 
-                 header {
-                     background-color: #f44336;
-                     color: #fff;
-                     padding: 20px;
-                 }
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
 
-                 header nav {
-                     display: flex;
-                     justify-content: space-between;
-                     align-items: center;
-                 }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-                 header nav a {
-                     color: #fff;
-                     margin-right: 20px;
-                 }
+        header nav a {
+            color: #fff;
+            padding: 10px;
+        }
 
-                 header nav a:hover {
-                     text-decoration: underline;
-                 }
+        header nav a:hover {
+            background-color: #555;
+        }
 
-                 .hero {
-                     height: 100vh;
-                     background-image: url('car.jpg');
-                     background-size: cover;
-                     background-position: center;
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     text-align: center;
-                     color: #fff;
-                     font-size: 2rem;
-                 }
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background-image: url('https://source.unsplash.com/random/food,plate');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+        }
 
-                 .hero button {
-                     background-color: #fff;
-                     color: #f44336;
-                     border: none;
-                     padding: 10px 20px;
-                     cursor: pointer;
-                 }
+        .hero button {
+            background-color: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-                 .features {
-                     background-color: #f4f4f4;
-                     padding: 80px 0;
-                 }
+        .hero button:hover {
+            background-color: #333;
+            color: #fff;
+        }
 
-                 .features h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        /* Features */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px;
+        }
 
-                 .features ul {
-                     display: flex;
-                     justify-content: space-around;
-                     flex-wrap: wrap;
-                 }
+        .features div {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-                 .features li {
-                     width: calc(33.33% - 20px);
-                     margin-bottom: 40px;
-                     text-align: center;
-                     padding: 20px;
-                     background-color: #fff;
-                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                 }
+        .features h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
 
-                 .features li h3 {
-                     margin-top: 0;
-                 }
+        .features p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
 
-                 .pricing {
-                     background-color: #333;
-                     color: #fff;
-                     padding: 80px 0;
-                 }
+        /* Pricing */
+        .pricing {
+            background-color: #f5f5f5;
+            padding: 50px;
+        }
 
-                 .pricing h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        .pricing table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-                 .pricing ul {
-                     display: flex;
-                     justify-content: space-around;
-                 }
+        .pricing th,
+        .pricing td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
 
-                 .pricing li {
-                     width: calc(33.33% - 20px);
-                     background-color: #fff;
-                     color: #333;
-                     text-align: center;
-                     padding: 40px;
-                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                     transition: background-color 0.3s ease;
-                 }
+        .pricing th {
+            background-color: #333;
+            color: #fff;
+        }
 
-                 .pricing li:hover {
-                     background-color: #f4f4f4;
-                 }
+        .pricing tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-                 .pricing li p {
-                     margin: 0;
-                 }
+        .pricing tr:hover {
+            background-color: #ddd;
+        }
 
-                 .banner {
-                     background-color: #f44336;
-                     color: #fff;
-                     padding: 80px 0;
-                     text-align: center;
-                 }
+        /* Banner */
+        .banner {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
 
-                 .faq {
-                     background-color: #f4f4f4;
-                     padding: 80px 0;
-                 }
+        /* FAQ */
+        .faq {
+            padding: 50px;
+        }
 
-                 .faq h2 {
-                     text-align: center;
-                     margin-bottom: 40px;
-                 }
+        .faq h2 {
+            margin: 0 0 10px;
+        }
 
-                 .faq ul {
-                     list-style: none;
-                 }
+        .faq p {
+            margin: 0;
+            line-height: 1.5;
+        }
 
-                 .faq li {
-                     background-color: #fff;
-                     padding: 20px;
-                     border-bottom: 1px solid #ddd;
-                     transition: background-color 0.3s ease;
-                 }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-                 .faq li:last-child {
-                     border-bottom: none;
-                 }
+        footer a {
+            color: #fff;
+            margin: 0 5px;
+        }
 
-                 .faq li:hover {
-                     background-color: #f4f4f4;
-                 }
+        footer a:hover {
+            color: #ccc;
+        }
 
-                 .faq li p {
-                     margin: 0;
-                 }
+        footer i {
+            color: #ccc;
+            margin: 0 5px;
+        }
 
-                 footer {
-                     background-color: #333;
-                     color: #fff;
-                     padding: 40px 0;
-                     text-align: center;
-                 }
+        @media screen and (max-width: 768px) {
+            .features div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
 
-                 footer a {
-                     color: #fff;
-                     margin-right: 10px;
-                 }
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-                 footer a:hover {
-                     text-decoration: underline;
-                 }
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Delish Delights</h1>
+        <p>Order your favorite meals online and enjoy them at home!</p>
+        <button>Order Now</button>
+    </section>
 
-                 footer i {
-                     font-size: 1.5rem;
-                     margin-right: 5px;
-                 }
-             </style>
-         </head>
-         <body>
-             <header>
-                 <nav>
-                     <a href="#features">Features</a>
-                     <a href="#pricing">Pricing</a>
-                     <a href="#faq">FAQ</a>
-                 </nav>
-             </header>
-             <div class="hero">
-                 <h1>Buy and Sell Cars Online</h1>
-                 <button>Join Now</button>
-             </div>
-             <div class="features">
-                 <h2>Key Features</h2>
-                 <ul>
-                     <li>
-                         <h3>Easy Listing</h3>
-                         <p>List your car in just a few clicks</p>
-                     </li>
-                     <li>
-                         <h3>Find Your Dream Car</h3>
-                         <p>Browse through thousands of cars</p>
-                     </li>
-                     <li>
-                         <h3>Secure Transactions</h3>
-                         <p>Transact safely and securely</p>
-                     </li>
-                 </ul>
-             </div>
-             <div class="pricing">
-                 <h2>Pricing Plans</h2>
-                 <ul>
-                     <li>
-                         <h3>Basic</h3>
-                         <p>$9.99/month</p>
-                     </li>
-                     <li>
-                         <h3>Premium</h3>
-                         <p>$19.99/month</p>
-                     </li>
-                     <li>
-                         <h3>Pro</h3>
-                         <p>$29.99/month</p>
-                     </li>
-                 </ul>
-             </div>
-             <div class="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Sign up now and get a free 30-day trial</p>
-             </div>
-             <div class="faq">
-                 <h2>Frequently Asked Questions</h2>
-                 <ul>
-                     <li>
-                         <h3>How does it work?</h3>
-                         <p>You can list your car for sale and browse through other listings. Once a buyer is interested, you can transact securely through our platform.</p>
-                     </li>
-                     <li>
-                         <h3>Is it safe to use?</h3>
-                         <p>Yes, we use SSL encryption and secure payment gateways to ensure safe transactions.</p>
-                     </li>
-                     <li>
-                         <h3>How do I list my car?</h3>
-                         <p>Simply sign up, create a listing, and provide the necessary details about your car.</p>
-                     </li>
-                 </ul>
-             </div>
-             <footer>
-                 <p>&copy; 2022 CarSale. All rights reserved.</p>
-                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-             </footer>
-         </body>
-         </html>
+    <!-- Features -->
+    <section class="features">
+        <div>
+            <h2>Fast Delivery</h2>
+            <p>We deliver your meals within 30 minutes of ordering.</p>
+        </div>
+        <div>
+            <h2>Wide Selection</h2>
+            <p>Choose from a variety of dishes and cuisines.</p>
+        </div>
+        <div>
+            <h2>Easy Ordering</h2>
+            <p>Place your order online or through our mobile app.</p>
+        </div>
+        <div>
+            <h2>Secure Payment</h2>
+            <p>Pay securely online using multiple payment options.</p>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <h2>Our Pricing Plans</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price per Month</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>$9.99</td>
+                    <td>10 dishes per month</td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>$14.99</td>
+                    <td>20 dishes per month</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>$19.99</td>
+                    <td>30 dishes per month</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Limited Time Offer!</h2>
+        <p>Get 20% off on your first order with us!</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <article>
+            <h3>How long does it take to deliver my order?</h3>
+            <p>We deliver your meals within 30 minutes of ordering.</p>
+        </article>
+        <article>
+            <h3>What payment methods do you accept?</h3>
+            <p>We accept all major credit cards and PayPal.</p>
+        </article>
+        <article>
+            <h3>Can I cancel my order?</h3>
+            <p>Yes, you can cancel your order before it is prepared and cooked.</p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2022 Delish Delights. All rights reserved.</p>
+        <p>Follow us:</p>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+</body>
+</html>
