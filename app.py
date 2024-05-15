@@ -1,45 +1,41 @@
-import utils
 import streamlit as st
-import streamlit.components.v1 as comps
-import time
+from streamlit_option_menu import option_menu
+import home
+import modifications
 
-def main():
-    st.title('Website Builder')
-    user_text = st.text_input("Enter text:", "")
-    
-    # # Initialize session state to manage page navigation
-    # if 'page' not in st.session_state:
-    #     st.session_state.page = 'home'
+st.set_page_config(page_title="Web-Builder")
 
-    # if st.session_state.page == 'home':
-    if user_text:
-            st.write("You entered:", user_text)
-            code = utils.generate_code(user_text)
-            utils.write_to_file(code)
-            utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input") 
-            with st.spinner('Deploying website...'):
-                website_url = utils.deploy_render_api()
-                time.sleep(100)
-            # Show website URL and iframe once deployment is complete
-            st.write(f'Website Link: {website_url}')
-            st.write("Here's your website:")
-            comps.iframe(website_url, height=500, scrolling=True)
+class App:
+    def __init__(self):
+        self.apps = []
 
-            modifications_text=st.text_input("Enter modifications:", "")
-            
-            if modifications_text:
-                code_modified=utils.perform_modifications(modifications_text, code)
-                utils.write_to_file(code_modified)
-                utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input")
-                with st.spinner('Deploying website...'):
-                    website_url = utils.deploy_render_api()
-                    time.sleep(100)
-            # Show website URL and iframe once deployment is complete
-                st.write(f'Website Link: {website_url}')
-                st.write("Here's your website:")
-                comps.iframe(website_url, height=500, scrolling=True)
+    def add_app(self, title, function):
+        self.apps.append({
+            "title": title,
+            "function": function
+        })
 
+    def run(self):  # Add self parameter
+        with st.sidebar:
+            app = option_menu(
+                menu_title="Web-Builder",
+                options=['Home', 'Modifications'],
+                icons=['house-fill', 'trophy-fill'],
+                menu_icon='chat-text-fill',
+                default_index=1,
+                styles={
+                    "container": {"padding": "5!important", "background-color": 'black'},
+                    "icon": {"color": "white", "font-size": "23px"},
+                    "nav-link": {"color": "white", "font-size": "20px", "text-align": "left", "margin": "0px",
+                                 "--hover-color": "blue"},
+                    "nav-link-selected": {"background-color": "#02ab21"},
+                }
+            )
 
+        if app == "Home":
+            home.main()
+        elif app == "Modifications":  # Corrected the comparison
+            modifications.app()
 
-if __name__ == "__main__":
-    main()
+app = App()
+app.run()

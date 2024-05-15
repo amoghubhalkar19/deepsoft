@@ -3,7 +3,7 @@
          <head>
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>ShoeShop - Stylish Shoes for Every Occasion</title>
+             <title>WatchCo - Modern Timepieces</title>
              <style>
                  * {
                      margin: 0;
@@ -12,7 +12,7 @@
                  }
 
                  body {
-                     font-family: 'Open Sans', sans-serif;
+                     font-family: 'Montserrat', sans-serif;
                      line-height: 1.6;
                  }
 
@@ -42,31 +42,36 @@
                  /* Hero */
                  .hero {
                      height: 100vh;
-                     background-image: url('shoe.jpg');
+                     background-image: url('watch.jpg');
                      background-size: cover;
                      background-position: center;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     text-align: center;
+                     color: #fff;
                  }
 
                  .hero h1 {
-                     color: #fff;
-                     text-align: center;
-                     font-size: 48px;
-                     margin-top: 100px;
+                     font-size: 4rem;
                  }
 
                  .hero button {
                      background-color: #fff;
                      color: #333;
+                     padding: 10px 20px;
                      border: none;
-                     padding: 15px 30px;
                      cursor: pointer;
-                     font-size: 18px;
+                 }
+
+                 .hero button:hover {
+                     background-color: #ddd;
                  }
 
                  /* Features */
                  .features {
-                     background-color: #f2f2f2;
                      padding: 50px;
+                     background-color: #f5f5f5;
                  }
 
                  .features h2 {
@@ -77,23 +82,34 @@
                  .features ul {
                      display: flex;
                      justify-content: space-around;
+                     align-items: center;
                  }
 
                  .features li {
                      width: 30%;
                      text-align: center;
-                     margin-bottom: 30px;
                  }
 
-                 .features li:last-child {
-                     margin-bottom: 0;
+                 .features li:nth-child(1) {
+                     background-color: #4CAF50;
+                     color: #fff;
+                 }
+
+                 .features li:nth-child(2) {
+                     background-color: #2196F3;
+                     color: #fff;
+                 }
+
+                 .features li:nth-child(3) {
+                     background-color: #45a049;
+                     color: #fff;
                  }
 
                  /* Pricing */
                  .pricing {
+                     padding: 50px;
                      background-color: #333;
                      color: #fff;
-                     padding: 50px;
                  }
 
                  .pricing h2 {
@@ -104,35 +120,38 @@
                  .pricing ul {
                      display: flex;
                      justify-content: space-around;
+                     align-items: center;
                  }
 
                  .pricing li {
                      width: 30%;
                      text-align: center;
-                     margin-bottom: 30px;
-                     background-color: rgba(255, 255, 255, 0.2);
-                     border-radius: 10px;
-                     padding: 30px;
+                     background-color: #ddd;
+                     padding: 20px;
+                     border: 1px solid #ccc;
+                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                     transition: all 0.3s ease;
                  }
 
                  .pricing li:hover {
-                     background-color: rgba(255, 255, 255, 0.4);
+                     background-color: #f1f1f1;
                  }
 
                  /* Banner */
                  .banner {
-                     background-color: #f2f2f2;
-                     padding: 50px;
+                     height: 200px;
+                     background-color: #f1c40f;
                      text-align: center;
+                     line-height: 200px;
                  }
 
                  /* FAQ */
                  .faq {
-                     background-color: #f2f2f2;
                      padding: 50px;
                  }
 
                  .faq h2 {
+                     text-align: center;
                      margin-bottom: 30px;
                  }
 
@@ -146,14 +165,9 @@
                  }
 
                  .faq li:before {
-                     content: 'Q: ';
-                     color: #333;
-                     font-weight: bold;
+                     content: "\2014";
+                     color: #777;
                      margin-right: 10px;
-                 }
-
-                 .faq li p {
-                     margin: 0;
                  }
 
                  /* Footer */
@@ -166,7 +180,7 @@
                  footer a {
                      color: #fff;
                      text-decoration: none;
-                     margin-right: 10px;
+                     margin: 10px;
                  }
 
                  footer a:hover {
@@ -174,7 +188,7 @@
                  }
 
                  footer i {
-                     font-size: 24px;
+                     font-size: 1.5rem;
                      margin-right: 10px;
                  }
              </style>
@@ -188,73 +202,83 @@
                      <a href="#faq">FAQ</a>
                  </nav>
              </header>
-             <section class="hero">
-                 <h1>Stylish Shoes for Every Occasion</h1>
+
+             <section class="hero" id="hero">
+                 <h1>Discover Our Modern Timepieces</h1>
                  <button>Shop Now</button>
              </section>
-             <section id="features" class="features">
+
+             <section class="features" id="features">
                  <h2>Key Features</h2>
                  <ul>
                      <li>
-                         <h3>Comfortable</h3>
-                         <p>Our shoes are designed to provide maximum comfort and support for your feet.</p>
+                         <h3>Sleek Design</h3>
+                         <p>Our watches boast a minimalist, modern design that complements any outfit.</p>
                      </li>
                      <li>
-                         <h3>Durable</h3>
-                         <p>Made with high-quality materials, our shoes can withstand the test of time.</p>
+                         <h3>Waterproof</h3>
+                         <p>All our watches are waterproof, making them perfect for any adventure.</p>
                      </li>
                      <li>
-                         <h3>Stylish</h3>
-                         <p>Our shoes come in a variety of designs and colors to suit any style.</p>
+                         <h3>Long Battery Life</h3>
+                         <p>Our watches have a long battery life, ensuring you never run out of power.</p>
                      </li>
                  </ul>
              </section>
-             <section id="pricing" class="pricing">
-                 <h2>Pricing</h2>
+
+             <section class="pricing" id="pricing">
+                 <h2>Choose Your Watch</h2>
                  <ul>
                      <li>
-                         <h3>Standard</h3>
+                         <h3>Classic</h3>
                          <p>$50</p>
                      </li>
                      <li>
-                         <h3>Premium</h3>
+                         <h3>Sport</h3>
                          <p>$75</p>
                      </li>
                      <li>
-                         <h3>Deluxe</h3>
+                         <h3>Premium</h3>
                          <p>$100</p>
                      </li>
                  </ul>
              </section>
+
              <section class="banner">
-                 <h2>Limited Time Offer!</h2>
-                 <p>Buy any pair of shoes and get 20% off on your next purchase.</p>
+                 <p>Limited Time Offer: Get 20% off your first purchase!</p>
              </section>
-             <section id="faq" class="faq">
+
+             <section class="faq" id="faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <p>Q: What materials are your shoes made of?</p>
-                         <p>A: Our shoes are made of high-quality leather and synthetic materials.</p>
+                         <details>
+                             <summary>What materials are your watches made of?</summary>
+                             <p>Our watches are made of high-quality stainless steel and scratch-resistant glass.</p>
+                         </details>
                      </li>
                      <li>
-                         <p>Q: Do you offer free shipping?</p>
-                         <p>A: Yes, we offer free shipping on all orders over $50.</p>
+                         <details>
+                             <summary>Are your watches waterproof?</summary>
+                             <p>Yes, all our watches are waterproof and can withstand depths up to 50 meters.</p>
+                         </details>
                      </li>
                      <li>
-                         <p>Q: What is your return policy?</p>
-                         <p>A: We offer a 30-day money-back guarantee on all purchases.</p>
+                         <details>
+                             <summary>How long does the battery last?</summary>
+                             <p>Our watches have a battery life of up to 2 years.</p>
+                         </details>
                      </li>
                  </ul>
              </section>
+
              <footer>
-                 <p>&copy; 2022 ShoeShop. All rights reserved.</p>
-                 <a href="#">Contact Us</a>
-                 <a href="#">Terms & Conditions</a>
-                 <a href="#">Privacy Policy</a>
-                 <i class="fab fa-facebook-f"></i>
-                 <i class="fab fa-twitter"></i>
-                 <i class="fab fa-instagram"></i>
+                 <p>&copy; 2022 WatchCo. All rights reserved.</p>
+                 <a href="#"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
              </footer>
+
+             <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
          </body>
          </html>
