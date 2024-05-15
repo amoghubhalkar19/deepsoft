@@ -3,7 +3,7 @@
          <head>
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>WatchCo - Modern Timepieces</title>
+             <title>CarSale - Buy and Sell Cars Online</title>
              <style>
                  * {
                      margin: 0;
@@ -12,13 +12,27 @@
                  }
 
                  body {
-                     font-family: 'Montserrat', sans-serif;
+                     font-family: 'Roboto', sans-serif;
                      line-height: 1.6;
                  }
 
-                 /* Header */
+                 a {
+                     text-decoration: none;
+                     color: #333;
+                 }
+
+                 ul {
+                     list-style: none;
+                 }
+
+                 .container {
+                     max-width: 1140px;
+                     margin: auto;
+                     padding: 0 20px;
+                 }
+
                  header {
-                     background-color: #333;
+                     background-color: #f44336;
                      color: #fff;
                      padding: 20px;
                  }
@@ -31,18 +45,16 @@
 
                  header nav a {
                      color: #fff;
-                     text-decoration: none;
-                     padding: 10px;
+                     margin-right: 20px;
                  }
 
                  header nav a:hover {
-                     background-color: #555;
+                     text-decoration: underline;
                  }
 
-                 /* Hero */
                  .hero {
                      height: 100vh;
-                     background-image: url('watch.jpg');
+                     background-image: url('car.jpg');
                      background-size: cover;
                      background-position: center;
                      display: flex;
@@ -50,137 +62,130 @@
                      align-items: center;
                      text-align: center;
                      color: #fff;
-                 }
-
-                 .hero h1 {
-                     font-size: 4rem;
+                     font-size: 2rem;
                  }
 
                  .hero button {
                      background-color: #fff;
-                     color: #333;
-                     padding: 10px 20px;
+                     color: #f44336;
                      border: none;
+                     padding: 10px 20px;
                      cursor: pointer;
                  }
 
-                 .hero button:hover {
-                     background-color: #ddd;
-                 }
-
-                 /* Features */
                  .features {
-                     padding: 50px;
-                     background-color: #f5f5f5;
+                     background-color: #f4f4f4;
+                     padding: 80px 0;
                  }
 
                  .features h2 {
                      text-align: center;
-                     margin-bottom: 30px;
+                     margin-bottom: 40px;
                  }
 
                  .features ul {
                      display: flex;
                      justify-content: space-around;
-                     align-items: center;
+                     flex-wrap: wrap;
                  }
 
                  .features li {
-                     width: 30%;
+                     width: calc(33.33% - 20px);
+                     margin-bottom: 40px;
                      text-align: center;
+                     padding: 20px;
+                     background-color: #fff;
+                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                  }
 
-                 .features li:nth-child(1) {
-                     background-color: #4CAF50;
-                     color: #fff;
+                 .features li h3 {
+                     margin-top: 0;
                  }
 
-                 .features li:nth-child(2) {
-                     background-color: #2196F3;
-                     color: #fff;
-                 }
-
-                 .features li:nth-child(3) {
-                     background-color: #45a049;
-                     color: #fff;
-                 }
-
-                 /* Pricing */
                  .pricing {
-                     padding: 50px;
                      background-color: #333;
                      color: #fff;
+                     padding: 80px 0;
                  }
 
                  .pricing h2 {
                      text-align: center;
-                     margin-bottom: 30px;
+                     margin-bottom: 40px;
                  }
 
                  .pricing ul {
                      display: flex;
                      justify-content: space-around;
-                     align-items: center;
                  }
 
                  .pricing li {
-                     width: 30%;
+                     width: calc(33.33% - 20px);
+                     background-color: #fff;
+                     color: #333;
                      text-align: center;
-                     background-color: #ddd;
-                     padding: 20px;
-                     border: 1px solid #ccc;
+                     padding: 40px;
                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                     transition: all 0.3s ease;
+                     transition: background-color 0.3s ease;
                  }
 
                  .pricing li:hover {
-                     background-color: #f1f1f1;
+                     background-color: #f4f4f4;
                  }
 
-                 /* Banner */
+                 .pricing li p {
+                     margin: 0;
+                 }
+
                  .banner {
-                     height: 200px;
-                     background-color: #f1c40f;
+                     background-color: #f44336;
+                     color: #fff;
+                     padding: 80px 0;
                      text-align: center;
-                     line-height: 200px;
                  }
 
-                 /* FAQ */
                  .faq {
-                     padding: 50px;
+                     background-color: #f4f4f4;
+                     padding: 80px 0;
                  }
 
                  .faq h2 {
                      text-align: center;
-                     margin-bottom: 30px;
+                     margin-bottom: 40px;
                  }
 
                  .faq ul {
-                     list-style-type: none;
-                     padding: 0;
+                     list-style: none;
                  }
 
                  .faq li {
-                     margin-bottom: 20px;
+                     background-color: #fff;
+                     padding: 20px;
+                     border-bottom: 1px solid #ddd;
+                     transition: background-color 0.3s ease;
                  }
 
-                 .faq li:before {
-                     content: "\2014";
-                     color: #777;
-                     margin-right: 10px;
+                 .faq li:last-child {
+                     border-bottom: none;
                  }
 
-                 /* Footer */
+                 .faq li:hover {
+                     background-color: #f4f4f4;
+                 }
+
+                 .faq li p {
+                     margin: 0;
+                 }
+
                  footer {
                      background-color: #333;
                      color: #fff;
-                     padding: 20px;
+                     padding: 40px 0;
+                     text-align: center;
                  }
 
                  footer a {
                      color: #fff;
-                     text-decoration: none;
-                     margin: 10px;
+                     margin-right: 10px;
                  }
 
                  footer a:hover {
@@ -189,96 +194,82 @@
 
                  footer i {
                      font-size: 1.5rem;
-                     margin-right: 10px;
+                     margin-right: 5px;
                  }
              </style>
          </head>
          <body>
              <header>
                  <nav>
-                     <a href="#hero">Home</a>
                      <a href="#features">Features</a>
                      <a href="#pricing">Pricing</a>
                      <a href="#faq">FAQ</a>
                  </nav>
              </header>
-
-             <section class="hero" id="hero">
-                 <h1>Discover Our Modern Timepieces</h1>
-                 <button>Shop Now</button>
-             </section>
-
-             <section class="features" id="features">
+             <div class="hero">
+                 <h1>Buy and Sell Cars Online</h1>
+                 <button>Join Now</button>
+             </div>
+             <div class="features">
                  <h2>Key Features</h2>
                  <ul>
                      <li>
-                         <h3>Sleek Design</h3>
-                         <p>Our watches boast a minimalist, modern design that complements any outfit.</p>
+                         <h3>Easy Listing</h3>
+                         <p>List your car in just a few clicks</p>
                      </li>
                      <li>
-                         <h3>Waterproof</h3>
-                         <p>All our watches are waterproof, making them perfect for any adventure.</p>
+                         <h3>Find Your Dream Car</h3>
+                         <p>Browse through thousands of cars</p>
                      </li>
                      <li>
-                         <h3>Long Battery Life</h3>
-                         <p>Our watches have a long battery life, ensuring you never run out of power.</p>
+                         <h3>Secure Transactions</h3>
+                         <p>Transact safely and securely</p>
                      </li>
                  </ul>
-             </section>
-
-             <section class="pricing" id="pricing">
-                 <h2>Choose Your Watch</h2>
+             </div>
+             <div class="pricing">
+                 <h2>Pricing Plans</h2>
                  <ul>
                      <li>
-                         <h3>Classic</h3>
-                         <p>$50</p>
-                     </li>
-                     <li>
-                         <h3>Sport</h3>
-                         <p>$75</p>
+                         <h3>Basic</h3>
+                         <p>$9.99/month</p>
                      </li>
                      <li>
                          <h3>Premium</h3>
-                         <p>$100</p>
+                         <p>$19.99/month</p>
+                     </li>
+                     <li>
+                         <h3>Pro</h3>
+                         <p>$29.99/month</p>
                      </li>
                  </ul>
-             </section>
-
-             <section class="banner">
-                 <p>Limited Time Offer: Get 20% off your first purchase!</p>
-             </section>
-
-             <section class="faq" id="faq">
+             </div>
+             <div class="banner">
+                 <h2>Limited Time Offer!</h2>
+                 <p>Sign up now and get a free 30-day trial</p>
+             </div>
+             <div class="faq">
                  <h2>Frequently Asked Questions</h2>
                  <ul>
                      <li>
-                         <details>
-                             <summary>What materials are your watches made of?</summary>
-                             <p>Our watches are made of high-quality stainless steel and scratch-resistant glass.</p>
-                         </details>
+                         <h3>How does it work?</h3>
+                         <p>You can list your car for sale and browse through other listings. Once a buyer is interested, you can transact securely through our platform.</p>
                      </li>
                      <li>
-                         <details>
-                             <summary>Are your watches waterproof?</summary>
-                             <p>Yes, all our watches are waterproof and can withstand depths up to 50 meters.</p>
-                         </details>
+                         <h3>Is it safe to use?</h3>
+                         <p>Yes, we use SSL encryption and secure payment gateways to ensure safe transactions.</p>
                      </li>
                      <li>
-                         <details>
-                             <summary>How long does the battery last?</summary>
-                             <p>Our watches have a battery life of up to 2 years.</p>
-                         </details>
+                         <h3>How do I list my car?</h3>
+                         <p>Simply sign up, create a listing, and provide the necessary details about your car.</p>
                      </li>
                  </ul>
-             </section>
-
+             </div>
              <footer>
-                 <p>&copy; 2022 WatchCo. All rights reserved.</p>
-                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                 <a href="#"><i class="fab fa-twitter"></i></a>
-                 <a href="#"><i class="fab fa-instagram"></i></a>
+                 <p>&copy; 2022 CarSale. All rights reserved.</p>
+                 <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
              </footer>
-
-             <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
          </body>
          </html>
