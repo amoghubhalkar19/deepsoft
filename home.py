@@ -12,10 +12,11 @@ def main():
             st.write("You entered:", user_text)
             code = utils.generate_code(user_text)
             utils.write_to_file(code)
+            time.sleep(2)
             utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input") 
             with st.spinner('Deploying website...'):
                 website_url = utils.deploy_render_api()
-                time.sleep(120)
+                time.sleep(150)
             # Show website URL and iframe once deployment is complete
             st.write(f'Website Link: {website_url}')
             st.write("Here's your website:")
