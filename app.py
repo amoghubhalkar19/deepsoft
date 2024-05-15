@@ -35,7 +35,7 @@ class App:
         if app == "Home":
             home.main()
         elif app == "Modifications":  # Corrected the comparison
-            modifications.app()
+            modifications.main()
 
 app = App()
 app.run()
