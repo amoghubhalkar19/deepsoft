@@ -13,7 +13,7 @@ def main():
             code = utils.generate_code(user_text)
             utils.write_to_file(code)
             time.sleep(2)
-            utils.git_commit_push(r"D:\deepsoft", "changing index.html for current input") 
+            utils.git_commit_push(r"https://github.com/amoghubhalkar19/deepsoft", "changing index.html for current input") 
             with st.spinner('Deploying website...'):
                 website_url = utils.deploy_render_api()
                 time.sleep(150)
